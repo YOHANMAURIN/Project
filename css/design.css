@@ -1,0 +1,53 @@
+body > .container{
+	padding-top: 60px;
+}
+
+
+img{
+	max-width: 100%;
+}
+
+blockquote {
+	word-wrap: break-word;
+}
+
+
+/* ******** FOOTER HOMEPAGE ********  */
+footer {
+	width: 100%;
+	margin: 0 auto;
+	background: #555555;
+	
+}
+
+footer ul {
+	list-style: none;
+	width: 100%;
+	padding-top: 5px;
+} 
+
+footer ul li {
+	float: left;
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0;
+	width: 25%;
+}
+
+@media all and (max-width: 540px){
+	footer li {
+		float: left;
+		width: 100%;
+		margin: 1% 0 1% 0;
+	}
+}
+
+footer li a, footer li a:visited, footer a:link, footer a:active {
+	display: block;
+	color: white;
+	text-align: center;
+}
+
+footer li a:hover {
+	color: #f08000;
+	text-decoration: none;
+}
