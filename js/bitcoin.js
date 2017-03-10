@@ -54,3 +54,22 @@ $(document).ready(function() {
 		}
 	});
 });
+
+$(document).ready(function() {
+	$.ajax({
+		url : "https://api.blockchain.info/stats?cors=true",
+		dataType : "json",
+		contentType : "application/json; charset=utf-8",
+		type : "GET",
+		timeout:"5000",
+		async : false,
+
+		success : function(data) {
+			$('#bitcoin_usd_price').append(data.difficulty);
+		},
+
+		error : function(xhr, status, err) {
+			$('#bitcoin_usd_price').append(err+" N/A");
+		}
+	});
+});
