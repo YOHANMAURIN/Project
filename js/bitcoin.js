@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 	$.ajax({
 		url : "http://bitcoin.mubiz.com/info",
 		dataType : "json",
@@ -15,7 +15,7 @@ $(document).ready(function() {
 			$('#bitcoin_block_number').append(err+" N/A");
 		}
 	});
-});
+});*/
 
 $(document).ready(function() {
 	$.ajax({
