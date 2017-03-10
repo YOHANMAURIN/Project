@@ -1,12 +1,202 @@
 <html>
-  <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-  </head>
-  <body>
-    <h1>page bitcoin</h1>
-    <A href = "js.html">js</A>
-    <A href= "https://yohanmaurin.github.io">index</A>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  </body>
+<head>
+<meta charset="UTF-8" />
+
+<title>ESILV - Blockchain Programming - TP/TD 3e année | Mubiz</title>
+<meta name="description"
+	content="Sujet de TP/TD Blockchain Programming pour les 3e année de l'ESILV" />
+<meta name="keywords" content="ESILV, TP," />
+
+<meta name="robots" content="index,follow" />
+<meta name="rating" content="safe for kids" />
+<meta name="revisit-after" content="14 days" />
+<meta name="author" content="Mubiz" />
+
+<meta name="geo.placename" content="France" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="GitHub - Albin CAUDERLIER" />
+<meta property="og:locale" content="fr_FR" />
+
+<meta name="theme-color" content="#009999">
+
+<meta property="fb:app_id" content="1261950717171137" />
+
+<link rel="shortcut icon" type="image/ico"
+	href="http://mubiz.com/images/favicon.png" />
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
+
+
+<!-- BOOTSTRAP -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" media="all" type="text/css"
+	href="../styles/design.css" />
+
+<!-- Fonts Awesome : Pour les icones -->
+<link
+	href="https://blackrockdigital.github.io/startbootstrap-sb-admin/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+
+
+<!-- BITCOIN -->
+<script type="text/javascript" src="../js/bitcoin.js" defer></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="/" class="navbar-brand" rel="home" title=""><img
+					style="max-width: 100px;"
+					src="http://mubiz.com/images/mubiz/mubiz-logo-white.png"
+					alt="Mubiz logo" /></a>
+			</div>
+			<div class="navbar-collapse collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" role="button" title="TP 3A"
+						aria-haspopup="true" aria-expanded="false" href="/3a">3e année</a>
+						<ul class="dropdown-menu">
+							<li><a href="/3a/#installation">Pré-requis</a></li>
+							<li><a href="/3a/#tp1">TP1</a></li>
+							<li><a href="/3a/#tp2">TP2</a></li>
+							<li><a href="/3a/#tp3">TP3</a></li>
+							<li><a href="/3a/#tp4">TP4</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" role="button" title="TP 3A"
+						aria-haspopup="true" aria-expanded="false" href="/4a"
+						title="TP 4A">4e année</a>
+						<ul class="dropdown-menu">
+							<li><a href="/4a/#installation">Pré-requis</a></li>
+							<li><a href="/4a/#tp1">TP1</a></li>
+							<li><a href="/4a/#tp2">TP2</a></li>
+							<li><a href="/4a/#tp3">TP3</a></li>
+							<li><a href="/4a/#tp4">TP4</a></li>
+							<li><a href="/4a/#tp5">TP5</a></li>
+						</ul></li>
+					<li><a href="/solidity"
+						title="Bases concernant le language Solidity">Solidity</a></li>
+					<li><a href="/tuto-arc" title="Tutoriel ARC">Tutoriel ARC</a></li>
+					<li><a href="/tuto-doc-node-web3" title="Tutoriel Web3.js">Tutoriel
+							Web3.js</a></li>
+					<li><a href="/lexique" title="Lexique Blockchain">Lexique
+							Blockchain</a></li>
+					<li class="active"><a title="Bitcoin exploreur">Bitcoin</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container theme-showcase" role="main">
+		<div class="jumbotron">
+			<h1>Bitcoin</h1>
+		</div>
+	</div>
+
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-yellow">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-tasks fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_block_number"></span>
+									</h2>
+									<div>Blocks</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-tasks fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_network_hash"></span>
+									</h2>
+									<div>Blocks</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-red">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-tasks fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_blocks"></span>
+									</h2>
+									<div>Blocks</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="panel panel-green">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-xs-3">
+									<i class="fa fa-money fa-5x"></i>
+								</div>
+								<div class="col-xs-9 text-right">
+									<h2>
+										<span id="bitcoin_usd_price"></span>
+									</h2>
+									<div> / bitcoin</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<a href="http://mubiz.com" title="Made by Albin CAUDERLIER for Mubiz">(c)
+				Mubiz</a>
+		</div>
+		<ul class="footer-list">
+			<li class="footer-list-item"><a href="http://mubiz.com"
+				title="Mubiz - Et vous ? Que vendez-vous ?">Mubiz</a></li>
+			<li class="footer-list-item"><a href="http://mubiz.com/about"
+				title="A propos de Mubiz">A propos de Mubiz</a></li>
+			<li class="footer-list-item"><a
+				href="http://mubiz.com/developers" title="API de Mubiz">API de
+					Mubiz</a></li>
+		</ul>
+	</footer>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
 </html>
