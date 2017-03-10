@@ -18,6 +18,25 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+	$.ajax(
+		url : "https://blockchain.info/fr/ticker?cors=true",
+		dataType : "json",
+		contentType : "application/json; charset=utf-8",
+		type : "GET",
+		timeout: "5000",
+		async : false,
+
+		success : function(data) {
+			$('#bitcoin_network_hash').append(data.EUR["15m"]+' '+data.EUR.symbol);
+		},
+
+		error : function(xhr, status, err) {
+			$('#bitcoin_network_hash').append(err+" N/A");
+		}
+	});
+});
+
+$(document).ready(function() {
 	$.ajax({
 		url : "https://api.blockchain.info/stats?cors=true",
 		dataType : "json",
