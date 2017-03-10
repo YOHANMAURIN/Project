@@ -18,7 +18,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	$.ajax(
+	$.ajax({
 		url : "https://blockchain.info/fr/ticker?cors=true",
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
