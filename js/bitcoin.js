@@ -29,32 +29,16 @@ $(document).ready(function() {
 		success : function(data) {
 			$('#bitcoin_difficulty').append(data.difficulty);
 			$('#bitcoin_connection').append(data.connections);
+			$('#bitcoin_protocol').append(data.protocolversion);
 		},
 
 		error : function(xhr, status, err) {
 			$('#bitcoin_difficulty').append(err+" N/A");
 			$('#bitcoin_connection').append(err+" N/A");
+			$('#bitcoin_protocol').append(err+" N/A");
 		}
 	});
 });
 
-$(document).ready(function() {
-	$.ajax({
-		url : "https://api.blockchain.info/stats?cors=true",
-		dataType : "json",
-		contentType : "application/json; charset=utf-8",
-		type : "GET",
-		timeout:"5000",
-		async : false,
-
-		success : function(data) {
-			$('#bitcoin_blocks').append(data.minutes_between_blocks);
-		},
-
-		error : function(xhr, status, err) {
-			$('#bitcoin_blocks').append(err+" N/A");
-		}
-	});
-});
 
 
