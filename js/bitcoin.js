@@ -27,11 +27,11 @@ $(document).ready(function() {
 		async : false,
 
 		success : function(data) {
-			$('#bitcoin_network_hash').append(data.difficulty);
+			$('#bitcoin_difficulty').append(data.difficulty);
 		},
 
 		error : function(xhr, status, err) {
-			$('#bitcoin_network_hash').append(err+" N/A");
+			$('#bitcoin_difficulty').append(err+" N/A");
 		}
 	});
 });
@@ -47,12 +47,12 @@ $(document).ready(function() {
 
 		success : function(data) {
 			$('#bitcoin_blocks').append(data.minutes_between_blocks);
-			$('#bitcoin_usd_price').append(data.difficulty);
+			$('#bitcoin_network_hash').append(data.difficulty);
 		},
 
 		error : function(xhr, status, err) {
 			$('#bitcoin_blocks').append(err+" N/A");
-			$('#bitcoin_usd_price').append(err+" N/A");
+			$('#bitcoin_network_hash').append(err+" N/A");
 		}
 	});
 });
