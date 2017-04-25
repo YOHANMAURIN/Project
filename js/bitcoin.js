@@ -28,12 +28,12 @@ $(document).ready(function() {
 
 		success : function(data) {
 			$('#bitcoin_difficulty').append(data.difficulty);
-			$('#bitcoin_network_hash').append(data.connections);
+			$('#bitcoin_connection').append(data.connections);
 		},
 
 		error : function(xhr, status, err) {
 			$('#bitcoin_difficulty').append(err+" N/A");
-			$('#bitcoin_blocks').append(err+" N/A");
+			$('#bitcoin_connection').append(err+" N/A");
 		}
 	});
 });
