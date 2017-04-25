@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$.ajax({
-		url : "https://blockchain.info/fr/ticker",
+		url : "https://blockchain.info/fr/ticker?cors=true",
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
@@ -65,8 +65,7 @@ $(document).ready(function() {
 		async : false,
 
 		success : function(data) {
-			$('#bitcoin_network_hash').append(data.data.EUR["15m"]+' '+data.EUR.symbol);
-		},);
+			$('#bitcoin_network_hash').append(data.EUR["15m"]+' '+data.EUR.symbol);
 		},
 
 		error : function(xhr, status, err) {
@@ -74,4 +73,3 @@ $(document).ready(function() {
 		}
 	});
 });
-
