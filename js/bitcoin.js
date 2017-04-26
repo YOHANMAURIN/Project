@@ -19,12 +19,12 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$.ajax({
-		url : "https://bitcoin.mubiz.com/info",
+		url : "https://api.blockchain.info/stats?cors=true",
 		dataType : "json",
-		contentType : "application/json; charset=utf-8",
+		//contentType : "application/json; charset=utf-8",
 		type : "GET",
-		timeout: 	"5000",
-		async : false,
+		timeout: "5000",
+		async : true,
 
 		success : function(data) {
 			$('#bitcoin_difficulty').append(data.difficulty);
