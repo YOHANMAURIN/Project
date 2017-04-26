@@ -4,7 +4,7 @@ $(document).ready(function() {
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
-		timeout:"5000",
+		timeout:	"5000",
 		async : false,
 
 		success : function(data) {
@@ -23,7 +23,7 @@ $(document).ready(function() {
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
-		timeout: "5000",
+		timeout: 	"5000",
 		async : false,
 
 		success : function(data) {
@@ -43,7 +43,7 @@ $(document).ready(function() {
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
-		timeout: "5000",
+		timeout:	 "5000",
 		async : false,
 
 		success : function(data) {
@@ -63,7 +63,7 @@ $(document).ready(function() {
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
-		timeout: "5000",
+		timeout: 	"5000",
 		async : false,
 
 		success : function(data) {
