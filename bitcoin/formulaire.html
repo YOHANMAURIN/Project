@@ -26,13 +26,10 @@
 
 
 <!-- BOOTSTRAP -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+></script>
 
 <link rel="stylesheet" media="all" type="text/css"
 	href="../styles/design.css" />
@@ -45,6 +42,7 @@
 
 <!-- BITCOIN -->
 <script type="text/javascript" src="../js/bitcoin.js" defer></script>
+
 
 </head>
 <body>
@@ -60,8 +58,27 @@
 			</div>
 		</div>
 	</nav>
+	
+	<div class="container theme-showcase" role="main">
+		<div class="jumbotron">
+			<i class="fa fa-search fa-5x"> Rechercher un hashcode</i>
+			<br><br>
+			<input type="texte" class="form-control" id="Hashcode" placeholder="Numéro du hashcode souhaité" >
+			<br>
+			<button type="submit" class="btn btn-default" onclick="getTextInput();">Submit</button>
+			<div class="card-block">
+			<blockquote class="card-blockquote">
+			 <div id="jjson" class="jjson"></div>
+			</blockquote>
+		  </div>
+		
+			
+		</div>
+	</div>
+	
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="../bitcoin/jsonviewer.js"></script>
+	<script type="text/javascript" src="../bitcoin/jsformulaire.js" defer></script>
 </body>
 </html>
