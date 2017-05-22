@@ -23,14 +23,16 @@ table
 td
 {
 	background-color:white;
-    	border: 1px solid black;
+    	border: 3px solid black;
 	text-align: center;
+	font-size: 13px; 
 }
 th
 {
 	text-align: center;
 	background-color:DarkGreen;
-    	border: 1px solid black;
+    	border: 3px solid black;
+	font-size: 13px;
 }
 
 footer 
