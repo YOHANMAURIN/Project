@@ -5,7 +5,11 @@ body
 	background-attachment: scroll;
 }
 
+.Top
+{
+	border-style:none;
 	
+}	
 h1
 {
 	color: black;
@@ -126,10 +130,4 @@ html>body #menu li ul ul
         left: auto; /* Repositionnement normal */
         min-height: 0; /* Corrige un bug sous IE */
 }
-.Top
-{
-	text-align:center;
-	margin: left;
-	text-decoration:none;
-	
-}
+
