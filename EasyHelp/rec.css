@@ -1,8 +1,10 @@
-body {
-	color:black;
-	background-color:white;
-	background-image:url(images/fond.png);
-	}
+body
+{
+	background-image: url("17121966_10208823559209842_1511971894_o.png");
+	background-size: cover;
+	background-attachment: scroll;
+}
+
 	
 h1
 {
