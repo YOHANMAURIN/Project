@@ -5,9 +5,10 @@ body
 	background-attachment: scroll;
 }
 
-.Top
+table.Top
 {
 	border-style:none;
+	border-collapse: collapse;
 	
 }	
 h1
