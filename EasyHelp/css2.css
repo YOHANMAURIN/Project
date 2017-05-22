@@ -4,7 +4,10 @@
 	background-size: cover;
 }
 
-
+p
+{
+	text-decoration::none;
+}
 
 .logo
 {
@@ -174,7 +177,8 @@ h3
 	font-size:20px;
 	font-weight:bold;
 	padding:80px 60px;
-	text-decoration:none;
+	text-decoration : none;
+	text-align : center;
 }
 .myButton:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
@@ -197,6 +201,7 @@ h3
 {
 	text-align:center;
 	margin: left;
+	text-decoration:none;
 	
 }
 	
