@@ -155,7 +155,7 @@ h3
 	margin-right: 180px;
 }
 
-.myButton {	height:200px; width:500px;	-moz-box-shadow:inset 0px 0px 27px 0px #9acc85;
+.myButton {	height:100px; width:250px;	-moz-box-shadow:inset 0px 0px 27px 0px #9acc85;
 	-webkit-box-shadow:inset 0px 0px 27px 0px #9acc85;
 	box-shadow:inset 0px 0px 27px 0px #9acc85;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
