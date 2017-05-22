@@ -61,8 +61,6 @@ h4
 
 body
 {
-    background-image: url("ping2.jpg");
-    background-attachment: scroll;
-    background-repeat: repeat-x; 
-    background-position: top right; 
+	background-image: url("17121966_10208823559209842_1511971894_o.png");
+	background-size: cover;
 }
