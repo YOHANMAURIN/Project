@@ -1,0 +1,68 @@
+﻿@font-face { /* Définition d'une nouvelle police nommée LearningCurveProRegular */
+    font-family: 'LearningCurveProRegular';
+    src: url('LearningCurve_OT-webfont.eot');
+    src: url('LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LearningCurve_OT-webfont.woff') format('woff'),
+         url('LearningCurve_OT-webfont.ttf') format('truetype'),
+         url('LearningCurve_OT-webfont.svg#LearningCurveProRegular') format('svg');
+}
+
+h1
+{
+	color: red;
+	font-size: xx-large;
+	font-family: 'LearningCurveProRegular', Arial, serif;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline;
+}
+
+p
+{
+	color: black;
+	font-size: medium;
+	font-family: "Trebuchet MS" ,Arial ,"Arial Black", Verdana, sans-serif;
+	font-style: normal;
+	text-align: justify;
+}
+
+h2
+{
+	color: black;
+	font-size: x-large;
+	font-family: "Trebuchet MS" ,Arial ,"Arial Black", Verdana, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	text-align: justify;
+	text-decoration: underline;
+}
+
+h3
+{
+	color: black;
+	font-size: large;
+	font-family: "Trebuchet MS" ,Arial ,"Arial Black", Verdana, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	text-align: justify;
+	text-decoration: underline;
+}
+
+h4
+{
+	color: blue;
+	font-size: medium;
+	font-family: "Trebuchet MS" ,Arial ,"Arial Black", Verdana, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	text-align: justify;
+}
+
+body
+{
+    background-image: url("ping2.jpg");
+    background-attachment: scroll;
+    background-repeat: repeat-x; 
+    background-position: top right; 
+}
