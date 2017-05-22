@@ -19,20 +19,19 @@ table
 	color:black;
     	border-collapse: collapse;
 	margin:auto;
+	font-size: 15px;
 }
 td
 {
 	background-color:white;
     	border: 3px solid black;
 	text-align: center;
-	font-size: 13px; 
 }
 th
 {
 	text-align: center;
 	background-color:DarkGreen;
     	border: 3px solid black;
-	font-size: 13px;
 }
 
 footer 
