@@ -46,7 +46,7 @@ block
 #menu, #menu ul /* Liste */     
 {
         padding : 0; /* pas de marge intérieure */
-        margin : 0; /* ni extérieure */
+        margin : auto; 
         list-style : none; /* on supprime le style par défaut de la liste */
         line-height : 21px; /* on définit une hauteur pour chaque élément */
         text-align : center; /* on centre le texte qui se trouve dans la liste */
