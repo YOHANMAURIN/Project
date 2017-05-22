@@ -56,7 +56,7 @@ block
 {
         font-weight : bold; /* on met le texte en gras */
         font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
-        font-size : 12px; /* hauteur du texte : 12 pixels */
+        font-size : 14px; /* hauteur du texte : 14 pixels */
 }
 
 #menu a /* Contenu des listes */
@@ -71,7 +71,7 @@ block
 
 #menu li /* Elements des listes */      
 { 
-        float : left; 
+        float : center; 
         /* pour IE qui ne reconnaît pas "transparent" */
         border-right : 1px solid #fff; /* on met une bordure blanche à droite de chaque élément */
 }
