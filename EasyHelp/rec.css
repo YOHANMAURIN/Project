@@ -7,12 +7,14 @@ body
 
 table.Top
 {
+	background:none;
 	border-style:none;
 	border-collapse: collapse;
 	
 }
 td.R
 {
+	background:none;
 	border:0;
 	text-align:top;
 }
