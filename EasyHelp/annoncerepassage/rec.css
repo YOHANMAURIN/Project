@@ -1,0 +1,43 @@
+body {
+	color:black;
+	background-color:white;
+	background-image:url(images/fond.png);
+	}
+	
+h1
+{
+	color: black;
+	font-size: medium;
+	font-family: "Trebuchet MS" ,Arial ,"Arial Black", Verdana, sans-serif;
+	font-style: normal;
+	text-align: justify;
+	margin:auto;
+}
+table
+{
+	color:black;
+    border-collapse: collapse;
+	margin:auto;
+}
+td
+{
+	background-color:white;
+    border: 1px solid black;
+	text-align: center;
+}
+th
+{
+	text-align: center;
+	background-color:blue;
+    border: 1px solid black;
+}
+
+footer 
+{
+	margin-top:80px;
+	margin-bottom:50px;
+}
+block
+{
+	margin:auto;
+}
