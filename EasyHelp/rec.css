@@ -126,4 +126,10 @@ html>body #menu li ul ul
         left: auto; /* Repositionnement normal */
         min-height: 0; /* Corrige un bug sous IE */
 }
-
+.Top
+{
+	text-align:center;
+	margin: left;
+	text-decoration:none;
+	
+}
