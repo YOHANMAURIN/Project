@@ -10,7 +10,12 @@ table.Top
 	border-style:none;
 	border-collapse: collapse;
 	
-}	
+}
+td.R
+{
+	border:0;
+	text-align:top;
+}
 h1
 {
 	color: black;
