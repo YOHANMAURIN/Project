@@ -8,8 +8,8 @@ Projet réalisé par Maurin Yohan - Cysique Frédéric - Lopes Wendy
 Les votants pour le smart contract de jour sont l'ensemble des villageois</br>
 
 - Quelles seront les propositions ?
-<br>Les propositions pour les votants du smart contract de nuit (les loups-garou) sont ceux pour le smart contract de jour précédent, eux exclues 
-Les propositions pour les votants du smart contract de jour sont ceux pour le smart contract de nuit précédent, loups garous compris </br>
+<br>Les propositions pour les votants du smart contract de nuit (les loups-garou) sont ceux pour le smart contract de jour précédent, eux exclues.
+ Les propositions pour les votants du smart contract de jour sont ceux pour le smart contract de nuit précédent, loups garous compris </br>
 
 - Qui peut ajouter une proposition ?
 <br>Le meneur</br>
@@ -18,8 +18,8 @@ Les propositions pour les votants du smart contract de jour sont ceux pour le sm
 <br>Le vote durera tant que la partie ne sera pas terminée, à savoir tant que l'avant-dernier joueur d'un camps ne sera pas encore éliminé</br>
 
 - Comment seront calculés les résultats ?
-<br>La personne ayant le max de vote sera éliminé
-En cas d'égalité on fait un nouveau vote entre les personnes a égalité
+<br>La personne ayant le max de vote sera éliminé. 
+En cas d'égalité on fait un nouveau vote entre les personnes a égalité. 
 En cas de nouvelle égalité on elimine au hasard parmis les personnes a égalité</br>
 
 - Peut-on faire des délégations ? Comment ?
