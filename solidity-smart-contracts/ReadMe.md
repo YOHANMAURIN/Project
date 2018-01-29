@@ -1,7 +1,7 @@
 Projet réalisé par Maurin Yohan - Cysique Frédéric - Lopes Wendy
 
 - Y-a-t-il un organisateur désigné ?
-Le meneur du jeu
+<br> Le meneur du jeu </br>
 
 - Qui seront les votants ?
 Les votants pour le smart contract de nuit sont les loups-garou
