@@ -18,13 +18,13 @@ Les propositions pour les votants du smart contract de jour sont ceux pour le sm
 <br>Le vote durera tant que la partie ne sera pas terminée, à savoir tant que l'avant-dernier joueur d'un camps ne sera pas encore éliminé</br>
 
 - Comment seront calculés les résultats ?
-<br>La personne ayant le max de vote sera éliminé</br>
-<br>En cas d'égalité on fait un nouveau vote entre les personnes a égalité</br>
-<br>En cas de nouvelle égalité on elimine au hasard parmis les personnes a égalité</br>
+<br>La personne ayant le max de vote sera éliminé
+En cas d'égalité on fait un nouveau vote entre les personnes a égalité
+En cas de nouvelle égalité on elimine au hasard parmis les personnes a égalité</br>
 
 - Peut-on faire des délégations ? Comment ?
 <br>Non</br>
 
 - Quelles informations a-t-on sur les votants ? Comment s'assure-t-on que chacun ne vote que le nombre de fois autorisé ?
-<br>Liste pour tout le monde si elle est initialiser à 1 c'est un loup-garou, a 0 c'est un villageois</br>
-<br>A chaque adresse on associe un vote, s'il a deja voté il ne pourra voter à nouveau</br>
+<br>Liste pour tout le monde si elle est initialiser à 1 c'est un loup-garou, a 0 c'est un villageois
+A chaque adresse on associe un vote, s'il a deja voté il ne pourra voter à nouveau</br>
