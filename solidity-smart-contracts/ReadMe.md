@@ -1,4 +1,4 @@
-Projet réalisé par Maurin Yohan - Cysique Frédéric - Lopes Wendy
+Jeu du loup garou - Projet réalisé par Maurin Yohan - Cysique Frédéric - Lopes Wendy
 
 - Y-a-t-il un organisateur désigné ?
 <br> Le meneur du jeu </br>
