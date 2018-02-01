@@ -46,3 +46,4 @@ function initialisation_loup_garou(nombre_de_joueur)
 // le jeu est initialisé, on possède une liste avec le nombre de joueur,dans cette liste
 //la ième position correspond au ième joueur. Si il est initialisé à 0 c'est un villageois, si il
 //est initialisé à 1 c'est un loup garou
+}
