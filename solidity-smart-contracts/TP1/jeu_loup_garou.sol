@@ -69,6 +69,7 @@ function initialisation_loup_garou()
             if (liste_participants[indice].role==1)
             {
                 //il fait son vote
+                if(vote > liste_participants.length) throw;
             }
             indice=indice -1;
         }
