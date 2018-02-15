@@ -1,11 +1,11 @@
 pragma solidity ^0.4.0;
-contract initialisation {
+contract jeu_loup_garou {
     
     uint public nombre_de_joueur;
-
+    
     struct Joueurs
     {
-    address participants;
+    address addressparticipants;
     uint role;
     uint vote;
     uint vote_contre;
@@ -59,35 +59,63 @@ function initialisation_loup_garou()
 // le jeu est initialisé, on possède une liste avec le nombre de joueur,dans cette liste
 //la ième position correspond au ième joueur. Si il est initialisé à 0 c'est un villageois, si il
 //est initialisé à 1 c'est un loup garou
+//la variable role peut également être égal à -1 si la personne est éliminé
 
- 
-    function vote_nuit()
+
+    function vote_nuit(uint voteChoice)
     {
         uint indice = nombre_de_joueur;
         while (indice>0)
         {
             if (liste_participants[indice].role==1)
             {
-                //il fait son vote
-                if(vote > liste_participants.length) throw;
+               if(voteChoice > liste_participants.length) throw;
+                liste_participants.push( Joueurs({
+                    addressparticipants : msg.sender,
+                    vote : voteChoice,
+                    vote_contre: vote_contre, //il faut qu'il reste inchangé 
+                    roleType : 1,
+                    
+                        })
+                    );
             }
             indice=indice -1;
         }
         //totaliser les votes et éliminer la personne (mettre -1 dans la liste quand la personne est éliminer)
     }
     
-        function vote_jour()
+    function vote_jour(uint voteChoice)
     {
         uint indice = nombre_de_joueur;
         while (indice>0)
         {
-            if (liste_participants[indice].role==1 && liste_participants[indice].role==0)
+            if (liste_participants[indice].role==0)
             {
-                //il fait son vote 
+                if(voteChoice > liste_participants.length) throw;
+                liste_participants.push( Joueurs({
+                    addressparticipants : msg.sender,
+                    vote : voteChoice,
+                    vote_contre: vote_contre, //il faut qu'il reste inchangé 
+                    roleType : 0,
+                    
+                        })
+                    );
+            }
+            if (liste_participants[indice].role==1)
+            {
+                if(voteChoice > liste_participants.length) throw;
+                liste_participants.push( Joueurs({
+                    addressparticipants : msg.sender,
+                    vote : voteChoice,
+                    vote_contre: vote_contre, //il faut qu'il reste inchangé 
+                    roleType : 0,
+                    
+                        })
+                    );
             }
             indice=indice -1;
         }
         //totaliser les votes et éliminer la personne (mettre -1 dans la liste quand la personne est éliminer)
     }
-}  
-
+    
+}
