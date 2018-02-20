@@ -8,10 +8,21 @@ contract jeu_loup_garou {
     address addressparticipants;
     uint role;
     uint vote;
-    uint vote_contre;
+    //uint vote_contre;
     }
-    
     Joueurs[] public liste_participants; // la liste s'initialise à 0
+    
+    modifier isowner(){
+       if(msg.sender!=owner){throw;
+       _;
+       }
+   }
+    
+    mapping(address => address) public vote_contre;
+    
+    function update(uint joueur) public {
+        vote_contre[joueur] = 1;
+    }
     
 function initialisation_loup_garou()
 {
@@ -60,6 +71,7 @@ function initialisation_loup_garou()
 //la ième position correspond au ième joueur. Si il est initialisé à 0 c'est un villageois, si il
 //est initialisé à 1 c'est un loup garou
 //la variable role peut également être égal à -1 si la personne est éliminé
+    
 
 
     function vote_nuit(uint voteChoice)
@@ -72,12 +84,13 @@ function initialisation_loup_garou()
                if(voteChoice > liste_participants.length) throw;
                 liste_participants.push( Joueurs({
                     addressparticipants : msg.sender,
-                    vote : voteChoice,
-                    vote_contre: vote_contre, //il faut qu'il reste inchangé 
-                    roleType : 1,
+                    role : 1,
+                    vote : voteChoice
+                    //vote_contre: vote_contre,  
                     
                         })
                     );
+                    update(voteChoice);
             }
             indice=indice -1;
         }
@@ -95,11 +108,12 @@ function initialisation_loup_garou()
                 liste_participants.push( Joueurs({
                     addressparticipants : msg.sender,
                     vote : voteChoice,
-                    vote_contre: vote_contre, //il faut qu'il reste inchangé 
-                    roleType : 0,
+                    //vote_contre: vote_contre,
+                    role : 0
                     
                         })
                     );
+                    update(voteChoice);
             }
             if (liste_participants[indice].role==1)
             {
@@ -107,15 +121,21 @@ function initialisation_loup_garou()
                 liste_participants.push( Joueurs({
                     addressparticipants : msg.sender,
                     vote : voteChoice,
-                    vote_contre: vote_contre, //il faut qu'il reste inchangé 
-                    roleType : 0,
+                    //vote_contre: vote_contre, 
+                    role : 1
                     
                         })
                     );
+                    update(voteChoice);
             }
             indice=indice -1;
         }
         //totaliser les votes et éliminer la personne (mettre -1 dans la liste quand la personne est éliminer)
     }
     
+    
+      function kill() isowner(){
+           delete isowner;
+           selfdestruct(msg.sender);
+       }
 }
