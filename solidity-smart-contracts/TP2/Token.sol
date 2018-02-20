@@ -7,7 +7,7 @@ contract newToken {
     uint256 _value;
     
     function newToken(uint256 supply) public {
-        //uint256 supply = 50;
+        //uint256 supply = 50; si on veut le rentrer en dure le nombre de token
         balanceOf[msg.sender] = supply;
         
     }
