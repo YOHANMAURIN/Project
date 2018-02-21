@@ -12,11 +12,9 @@ contract jeu_loup_garou {
     }
     Joueurs[] public liste_participants; // la liste s'initialise à 0
     
-    modifier isowner(){
-       if(msg.sender!=owner){throw;
-       _;
-       }
-   }
+    address public owner;
+    function owned() public { owner = msg.sender; }
+
     
     mapping(address => address) public vote_contre;
     
@@ -134,8 +132,7 @@ function initialisation_loup_garou()
     }
     
     
-      function kill() isowner(){
-           delete isowner;
-           selfdestruct(msg.sender);
-       }
+    function kill() public {
+        if (msg.sender == owner) selfdestruct(owner);
+    }
 }
