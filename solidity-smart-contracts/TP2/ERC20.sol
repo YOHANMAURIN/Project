@@ -16,9 +16,12 @@ contract EIP20 is EIP20Interface{
     They allow one to customise the token contract & in no way influences the core functionality.
     Some wallets/interfaces might not even bother to look at this information.
     */
-    string public name;                   //fancy name: eg Simon Bucks
-    uint8 public decimals;                //How many decimals to show.
-    string public symbol;                 //An identifier: eg SBX
+    address public owner;
+    function owned() public { owner = msg.sender; }
+   
+    string public name;                   
+    uint8 public decimals;               
+    string public symbol;                 
 
     function EIP20(
         uint256 _initialAmount,
@@ -66,4 +69,8 @@ contract EIP20 is EIP20Interface{
     function allowance(address _owner, address _spender) public view returns (uint256 remaining) {
         return allowed[_owner][_spender];
     }   
+    
+    function kill() public {
+        if (msg.sender == owner) selfdestruct(owner);
+    }
 }
