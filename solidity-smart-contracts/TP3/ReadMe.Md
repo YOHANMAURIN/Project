@@ -1,4 +1,4 @@
-<br>Acte de notaire et proof of existence </br>
+Acte de notaire et proof of existence 
 
 <br>Comme vous pouvez le voir le smart contract est très basique il permet juste de stocké un string et ce string sera le hash du document notarial. </br>
 
