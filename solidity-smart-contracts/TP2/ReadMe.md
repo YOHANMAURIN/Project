@@ -5,7 +5,7 @@ Création d'un token de fidélité pour le Groupe Casino.
 
 - Qui l’émettra ? 
 <br>Caz est un point de fidélité émis par le groupe Casino. (C'est à dire par les enseignes Monoprix, Franprix, Géant, Naturalia et petit Casino.
-Lorsque que vous passez en caisse, tout les paliés de 10$ atteint vous avez un token Caz qui vous ait envoyé.</br>
+Lorsque que vous passez en caisse, chaque palié de 10$ atteint vous avez un token Caz qui vous ait envoyé.</br>
 
 - En quelle quantité ?
 <br>Le groupe Casino émettra 2 millions de token au début.</br>
