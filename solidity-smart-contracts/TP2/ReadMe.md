@@ -8,7 +8,7 @@ Création d'un token de fidélité pour le Groupe Casino.
 Lorsque que vous passez en caisse, chaque palié de 10$ atteint vous avez un token Caz qui vous ait envoyé.</br>
 
 - En quelle quantité ?
-<br>Le groupe Casino émettra 2 millions de token au début.</br>
+<br>Le groupe Casino émettra 2 millions de tokens au début.</br>
 
 - Sera-t-il possible d’en créer de nouveau ?
 <br>Non, aucun autres tokens sera créés. </br>
