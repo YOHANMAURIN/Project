@@ -1,7 +1,7 @@
 Création d'un token de fidélité pour le Groupe Casino. 
 
 - Quelle sera la valeur ?
-<br>Notre token s'appelle le Caz. De plus 5 Caz = 1$.</br>
+<br>Notre token s'appelle le Caz. De plus, 5 Caz = 1$.</br>
 
 - Qui l’émettra ? 
 <br>Caz est un point de fidélité émis par le groupe Casino. (C'est à dire par les enseignes Monoprix, Franprix, Géant, Naturalia et petit Casino.
