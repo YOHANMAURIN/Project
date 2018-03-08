@@ -18,7 +18,6 @@ Lorsque que vous passez en caisse, chaque palié de 10$ atteint vous avez un tok
 De ce fait, celà permettra à Casino de toujours avoir des tokens.</br>
 
 - Faudra-t-il être authentifié pour en posséder ? pour en transmettre ? Si oui par qui ?
-<br>Il faut être client casino pour en avoir. Une personne pourra transmettre ces points de fidélités à n'importe qui il lui suffira de connaitre son adresse. 
-On peut faire une API ou une application mobile pour que les personnes rentrent l'adresse à laquelle ils veulent envoyer des tokens. De plus, le back end 
-de l'application récupére les 2 adresses et intéragie avec le smart contract pour faire le transfert de token.</br>
+<br>Il faut être client casino pour en avoir. Une personne pourra transmettre ces points de fidélités à n'importe qui, il lui suffira de connaitre son adresse. 
+On peut faire une API ou une application mobile pour que les personnes rentrent l'adresse à laquelle ils veulent envoyer des tokens, il y aura de scanner un QR code pour envoyer les tokens ( ce que casino fera en caisse).C'est similaire au fonctionnement de l'application Jaxx. De plus, le back end de l'application récupére les 2 adresses et intéragie avec le smart contract pour faire le transfert de token.</br>
 
