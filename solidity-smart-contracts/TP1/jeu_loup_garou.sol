@@ -7,7 +7,8 @@ contract jeu_loup_garou {
     {
     address addressparticipants;
     uint role;
-    uint vote;
+    //uint vote;
+    address vote_contre;
     //uint vote_contre;
     }
     Joueurs[] public liste_participants; // la liste s'initialise à 0
@@ -16,11 +17,9 @@ contract jeu_loup_garou {
     function owned() public { owner = msg.sender; }
 
     
-    mapping(address => address) public vote_contre;
+    mapping(address => uint) public vote_contre;
     
-    function update(uint joueur) public {
-        vote_contre[joueur] = 1;
-    }
+
     
 function initialisation_loup_garou()
 {
@@ -72,59 +71,61 @@ function initialisation_loup_garou()
     
 
 
-    function vote_nuit(uint voteChoice)
+    function vote_nuit(address voteChoice)
     {
         uint indice = nombre_de_joueur;
         while (indice>0)
         {
             if (liste_participants[indice].role==1)
             {
-               if(voteChoice > liste_participants.length) throw;
+               //if(voteChoice != liste_participants.length) throw;
                 liste_participants.push( Joueurs({
                     addressparticipants : msg.sender,
                     role : 1,
-                    vote : voteChoice
-                    //vote_contre: vote_contre,  
+                    //vote : voteChoice
+                    vote_contre: voteChoice
                     
                         })
                     );
-                    update(voteChoice);
+                    vote_contre [voteChoice]+=1;
             }
             indice=indice -1;
         }
         //totaliser les votes et éliminer la personne (mettre -1 dans la liste quand la personne est éliminer)
     }
     
-    function vote_jour(uint voteChoice)
+    function vote_jour(address voteChoice)
     {
         uint indice = nombre_de_joueur;
         while (indice>0)
         {
             if (liste_participants[indice].role==0)
             {
-                if(voteChoice > liste_participants.length) throw;
+                //if(voteChoice > liste_participants.length) throw;
                 liste_participants.push( Joueurs({
                     addressparticipants : msg.sender,
-                    vote : voteChoice,
+                   // vote : voteChoice,
                     //vote_contre: vote_contre,
-                    role : 0
+                    role : 0,
+                    vote_contre: voteChoice
                     
                         })
                     );
-                    update(voteChoice);
+                vote_contre [voteChoice]+=1;
             }
             if (liste_participants[indice].role==1)
             {
-                if(voteChoice > liste_participants.length) throw;
+                //if(voteChoice > liste_participants.length) throw;
                 liste_participants.push( Joueurs({
                     addressparticipants : msg.sender,
-                    vote : voteChoice,
+                    //vote : voteChoice,
                     //vote_contre: vote_contre, 
-                    role : 1
+                    role : 1,
+                    vote_contre: voteChoice
                     
                         })
                     );
-                    update(voteChoice);
+                    vote_contre [voteChoice]+=1;
             }
             indice=indice -1;
         }
