@@ -1,10 +1,10 @@
 pragma solidity ^0.4.18;
 
-import "./EIP20Interface.sol";
 
 
-contract EIP20 is EIP20Interface{
-
+contract EIP20 {
+    event Transfer(address indexed _from, address indexed _to, uint256 _value); 
+    event Approval(address indexed _owner, address indexed _spender, uint256 _value);
     uint256 public totalSupply;
     uint256 constant private MAX_UINT256 = 2**256 - 1;
     mapping (address => uint256) public balances;
@@ -15,9 +15,12 @@ contract EIP20 is EIP20Interface{
     They allow one to customise the token contract & in no way influences the core functionality.
     Some wallets/interfaces might not even bother to look at this information.
     */
-    string public name;                   //fancy name: eg Simon Bucks
-    uint8 public decimals;                //How many decimals to show.
-    string public symbol;                 //An identifier: eg SBX
+    address public owner;
+    function owned() public { owner = msg.sender; }
+   
+    string public name;                   
+    uint8 public decimals;               
+    string public symbol;                 
 
     function EIP20(
         uint256 _initialAmount,
@@ -65,4 +68,8 @@ contract EIP20 is EIP20Interface{
     function allowance(address _owner, address _spender) public view returns (uint256 remaining) {
         return allowed[_owner][_spender];
     }   
+    
+    function kill() public {
+        if (msg.sender == owner) selfdestruct(owner);
+    }
 }
