@@ -136,6 +136,10 @@
 
         $("#button").click(function() {
 		URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
+		//var _gas = URPav.SendCoin.estimateGas($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
+        	//_gas = _gas*1.2; //For safe side.
+        	//URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(), {from:'0xa6a1052858ec8d4fcbc6724184b9f3d8c2932119', gas:_gas});
+        
 		});
     </script>
 
