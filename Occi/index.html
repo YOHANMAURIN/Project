@@ -135,8 +135,14 @@
         });
 
         $("#button").click(function() {
-		URPav.Sendcoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),function (err, result) {
-		console.log(result);
+		URPav.Sendcoin(function (err, result) {
+	    if(!error)
+                {
+                    URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
+                    console.log(result);
+                }
+            else
+                console.error(error);
 		});
 		//URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
 		//var _gas = URPav.SendCoin.estimateGas($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),{gas: 5000000},function(error, gasAmount){
