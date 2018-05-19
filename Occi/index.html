@@ -135,8 +135,16 @@
         });
 
         $("#button").click(function() {
-
-		URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
+	URPav.SendCoin(function(error, result){
+            if(!error)
+                {
+                   // $("#sendcoin").html(result[0]+' = x / y = '+result[1]+' / z = '+result[2]+' / shopper = '+result[3]);
+                    console.log(result);
+                }
+            else
+                console.error(error);
+        });
+		//URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
 		//var _gas = URPav.SendCoin.estimateGas($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),{gas: 5000000},function(error, gasAmount){
     		//if(gasAmount == 5000000)
         	//	console.log('Method ran out of gas');
