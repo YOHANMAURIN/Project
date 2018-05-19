@@ -135,10 +135,9 @@
         });
 
         $("#button").click(function() {
-	URPav.SendCoin(function(error, result){
+	URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),function(error, result){
             if(!error)
                 {
-                   // $("#sendcoin").html(result[0]+' = x / y = '+result[1]+' / z = '+result[2]+' / shopper = '+result[3]);
                     console.log(result);
                 }
             else
