@@ -135,16 +135,8 @@
         });
 
         $("#button").click(function() {
-		URPav.Sendcoin(function (err, result) {
-	    if(!error)
-                {
-                    //URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
-                    console.log(result);
-                }
-            else
-                console.error(error);
-		});
-		//URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
+
+		URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
 		//var _gas = URPav.SendCoin.estimateGas($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),{gas: 5000000},function(error, gasAmount){
     		//if(gasAmount == 5000000)
         	//	console.log('Method ran out of gas');
