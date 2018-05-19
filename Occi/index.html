@@ -136,7 +136,7 @@
 
         $("#button").click(function() {
 		
-	URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),{from:'0x95Ea183985ea4F5f2a18bf07dB37eB401e768c73', gas:100000000},function(error, result){
+	URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),function(error, result){
             if(!error)
                 {
                     console.log(result);
