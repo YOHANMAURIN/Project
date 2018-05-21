@@ -84,7 +84,7 @@
 			},
 			{
 				"name": "",
-				"type": "uint8"
+				"type": "address"
 			}
 		],
 		"payable": false,
@@ -122,7 +122,7 @@
 			balance = web3.eth.getBalance (account); 
 			console.log (balance); 
 			})
-        var URPav = URPContract.at('0x91d7c4a43f433a31d68d4bee200e48349b560e2e');
+        var URPav = URPContract.at('0x8d252e7f7ad0aa62e4bbfebdcced8bd4b45f65be');
         console.log(URPav);
 		URPav.getSendCoin(function(error, result){
             if(!error)
