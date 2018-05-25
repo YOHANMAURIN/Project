@@ -116,13 +116,30 @@
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
 	}
 ]); //ABI
 			web3.eth.accounts.forEach (account => { 
 			balance = web3.eth.getBalance (account); 
 			console.log (balance); 
 			})
-        var URPav = URPContract.at('0x13cf5254e7c399aefd636bfdd453739cc25eaa6f');
+        var URPav = URPContract.at('0x11f9b57e99d7caddd43532412478814a47c861f0');
         console.log(URPav);
 		URPav.getSendCoin(function(error, result){
             if(!error)
