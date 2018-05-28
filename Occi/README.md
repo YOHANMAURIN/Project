@@ -1,4 +1,4 @@
-# Universal Reward Protol
+# Universal Reward Protocol
 
 ### Version 0.1
 
