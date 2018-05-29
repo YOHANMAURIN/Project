@@ -2,7 +2,7 @@
 
 ### Version 0.1
 
-##### - For the Shopper
+##### For the Shopper
 
 -Vous téléchargez l’application URP sur l’AppleStore ou l’AndroidStore. Vous aurez ensuite la possibilité de rentrer une adresse éthereum (ERC20 compatible ! Pas d’adresse d’exchange) et si vous n’en possédez pas nous vous en créerons une.
 
