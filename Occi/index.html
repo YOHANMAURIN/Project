@@ -64,12 +64,82 @@
 		
         web3.eth.defaultAccount = web3.eth.accounts['0x95Ea183985ea4F5f2a18bf07dB37eB401e768c734']; //web3.eth.accounts[]
 
-        var URPContract = web3.eth.contract(); //ABI
+        var URPContract = web3.eth.contract([
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getSendCoin",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_x",
+				"type": "uint32"
+			},
+			{
+				"name": "_y",
+				"type": "uint32"
+			},
+			{
+				"name": "_z",
+				"type": "uint32"
+			},
+			{
+				"name": "_shopper",
+				"type": "address"
+			}
+		],
+		"name": "SendCoin",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	}
+]); //ABI
 			web3.eth.accounts.forEach (account => { 
 			balance = web3.eth.getBalance (account); 
 			console.log (balance); 
 			})
-        var URPav = URPContract.at('0x9950bf14efa7fe67f11069879cae75f1135229cc');
+        var URPav = URPContract.at('0x0a7bd51d779fd7329ddea5c65d45c1a5f5769094');
         console.log(URPav);
 		URPav.getSendCoin(function(error, result){
             if(!error)
