@@ -9,7 +9,8 @@
 -->Clarifiez ici comment l’adresse Mac est jointe à l’adresse ethereum.
 Nous stockons tout cela dans une DB avec les adresses Mac correspondants aux adresses ethereum.
 
--Les capteurs (dire de quel type sont les capteurs) détectent les adresses MAC et grâce à la triangularisation les capteurs récupèrent également vos coordonnées de géolocalisation. Toutes ces données sont stockées dans une DB. (A tout moment elles pourront être supprimées, si vous le souhaitez en nous contactant). Nous sommes GDPR compliance. 
+-Les capteurs (dire de quel type sont les capteurs) détectent les adresses MAC et grâce à la triangularisation les capteurs récupèrent également vos coordonnées de géolocalisation. Votre longitude et latitude sont connus avec une précision de 6 chiffres avec la virgule et la précision de votre altitude est de 2 chiffres après la virgule. Toutes ces données sont stockées dans une DB. (A tout moment elles pourront être supprimées, si vous le souhaitez en nous contactant). Nous sommes GDPR compliance. 
+De plus pour être en adéquation avec Solidity qui ne prend n'y de chiffre à virgule et n'y de nombre négatif nous avons décidé pour résoudre les problèmes de nombre à virgule de multiplier par 1 000 000 votre latitute et longitude  puis de multiplier par 100 votre altitude. Pour finir nous avons décidé de sommer par 180 000 000 votre latitude et longitude pour ne plus avoir de nombre négatif. 
 
 -Nous matchons ensuite les 2 bases de données en une, ce qui nous permet d’avoir une DB avec votre adresse ethereum ainsi que vos coordonnées de géolocalisation.
 
@@ -22,6 +23,8 @@ if ( x1<x && x<x2 && y1<y && y<y2 && z1<z && z<z2){
        emit Transfer(_shopper,value);
        }
 ```
+x1, x2, y1, y2, z1, z2 correspondent à la latitude, longitude et altitude des extrémités du magasin. --> expliquer les valeurs des coordonnées (une fois qu'on les aura fixé).
+
 De plus comme vous pouvez le constater, si vous verifiez les conditions de la campagne alors un certain nombre de tokens vous seront envoyés.
 
 ##### For the retailer
