@@ -35,7 +35,7 @@ contract URPav {
                 uint tokenBalance = Test(0xc7b5822eA575806C6740Fe7fc38C8f86142f6B54).balanceOf(address(this));
                 Test(0xc7b5822eA575806C6740Fe7fc38C8f86142f6B54).transfer(retailer,tokenBalance);
                 emit Transfer(retailer,tokenBalance);
-                selfdestruct(retailer);//kill le contract et renvoie les éthers du SC au retailer
+                selfdestruct(retailer);//kill le contract et renvoie les éthers du SC à Ubisoft
             }
         }
    }
