@@ -302,7 +302,7 @@ contract PausableToken is StandardToken, Pausable {
   }
 }
 
-contract Test is StandardToken, PausableToken {
+contract Ubisoft is StandardToken, PausableToken {
   string public constant name = 'Ubisoft';                                      // Set the token name for display
   string public constant symbol = 'UBS';                                       // Set the token symbol for display
   uint8 public constant decimals = 18;                                          // Set the number of decimals for display
@@ -311,7 +311,7 @@ contract Test is StandardToken, PausableToken {
    * @dev SesnseToken Constructor
    * Runs only on initial contract creation.
    */
-  function Test() public{
+  function Ubisoft() public{
     totalSupply = INITIAL_SUPPLY;                               // Set the total supply
     balances[msg.sender] = INITIAL_SUPPLY;                      // Creator address is assigned all
     emit Transfer(0x0, msg.sender, INITIAL_SUPPLY);
