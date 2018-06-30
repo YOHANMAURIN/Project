@@ -303,10 +303,10 @@ contract PausableToken is StandardToken, Pausable {
 }
 
 contract Gemmes is StandardToken, PausableToken {
-  string public constant name = 'Ubisoft';                                      // Set the token name for display
-  string public constant symbol = 'UBS';                                       // Set the token symbol for display
+  string public constant name = 'Gemmes';                                      // Set the token name for display
+  string public constant symbol = 'GEM';                                       // Set the token symbol for display
   uint8 public constant decimals = 18;                                          // Set the number of decimals for display
-  uint256 public constant INITIAL_SUPPLY = 1000000 * 10**uint256(decimals);  // 1 million of UBS
+  uint256 public constant INITIAL_SUPPLY = 1000000000 * 10**uint256(decimals);  // 1 million of UBS
   /**
    * @dev SesnseToken Constructor
    * Runs only on initial contract creation.
