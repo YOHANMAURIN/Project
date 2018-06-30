@@ -3,7 +3,7 @@ import "./TokenERC20skin.sol";
 
 contract UBSav {
     
-    uint32 x; //récupèré via l’API Occi
+    uint32 x; //récupèré via un serveur
     uint32 y; 
     uint32 z;
     address player;
