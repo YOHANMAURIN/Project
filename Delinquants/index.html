@@ -30,9 +30,9 @@
 		
 	<label for="name" class="col-lg-2 control-label">z2 = 400</label>
 		
-	<label for="name" class="col-lg-2 control-label">Address retailer = 0x95Ea183985ea4F5f2a18bf07dB37eB401e768c73</label>
+	<label for="name" class="col-lg-2 control-label">Address Ubisoft = 0x95Ea183985ea4F5f2a18bf07dB37eB401e768c73</label>
 
-	<label for="name" class="col-lg-2 control-label">Value = 10 URP</label>
+	<label for="name" class="col-lg-2 control-label">Value = 10 UBS</label>
 		
 	<label for="name" class="col-lg-2 control-label">x</label>
         <input id="x" type="text">
@@ -43,8 +43,8 @@
 	<label for="name" class="col-lg-2 control-label">z</label>
         <input id="z" type="text">
 		
-	<label for="name" class="col-lg-2 control-label">shopper</label>
-        <input id="shopper" type="text">
+	<label for="name" class="col-lg-2 control-label">player</label>
+        <input id="player" type="text">
 		
         <button id="button">Push Data</button>
 
@@ -63,7 +63,7 @@
 		
 		
         web3.eth.defaultAccount = web3.eth.accounts['0x95Ea183985ea4F5f2a18bf07dB37eB401e768c734']; //web3.eth.accounts[]
-        var URPContract = web3.eth.contract([
+        var UBSContract = web3.eth.contract([
 	{
 		"constant": true,
 		"inputs": [],
@@ -138,12 +138,12 @@
 			balance = web3.eth.getBalance (account); 
 			console.log (balance); 
 			})
-        var URPav = URPContract.at('0x0a7bd51d779fd7329ddea5c65d45c1a5f5769094');
+        var UBSav = UBSContract.at('0x0a7bd51d779fd7329ddea5c65d45c1a5f5769094');
         console.log(URPav);
-		URPav.getSendCoin(function(error, result){
+		UBSav.getSendCoin(function(error, result){
             if(!error)
                 {
-                    $("#sendcoin").html(result[0]+' = x / y = '+result[1]+' / z = '+result[2]+' / shopper = '+result[3]);
+                    $("#sendcoin").html(result[0]+' = x / y = '+result[1]+' / z = '+result[2]+' / player = '+result[3]);
                     console.log(result);
                 }
             else
@@ -151,7 +151,7 @@
         });
         $("#button").click(function() {
 		
-	URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),function(error, result){
+	URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#player").val(),function(error, result){
             if(!error)
                 {
                     console.log(result);
@@ -159,14 +159,7 @@
             else
                 console.error(error);
         });
-		//URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val());
-		//var _gas = URPav.SendCoin.estimateGas($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),{gas: 5000000},function(error, gasAmount){
-    		//if(gasAmount == 5000000)
-        	//	console.log('Method ran out of gas');
-		//}); //oblige to put a callback when you use estimategas 
-        	//_gas = _gas*1.2; //For safe side.
-        	//URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(), {from:'0x95Ea183985ea4F5f2a18bf07dB37eB401e768c73', gas:_gas});
-        
+
 		});
     </script>
 
