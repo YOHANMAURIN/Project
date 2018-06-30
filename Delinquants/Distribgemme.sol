@@ -25,16 +25,16 @@ contract UBSav {
                     z =_z;
                     player = _player;
                     if ( x1<x && x<x2 && y1<y && y<y2 && z1<z && z<z2){
-                        Test(0xc7b5822eA575806C6740Fe7fc38C8f86142f6B54).transfer(_player,value); //adresse tokenERC20skin
+                        Ubisoft(0xbc1a01ef83ee7e3a3ab9a9ba67c56f4fba2166a9).transfer(_player,value); //adresse tokenERC20skin
                         emit Transfer(_player,value);
                     }
                 }
             }
             else{
-                address retailer=0x48a484a13BB7b08C8F0022C538E871cb4417E5c9; //0x48a484a13BB7b08C8F0022C538E871cb4417E5c9
+                address ubisoft=0x95ea183985ea4f5f2a18bf07db37eb401e768c73; 
                 uint tokenBalance = Test(0xc7b5822eA575806C6740Fe7fc38C8f86142f6B54).balanceOf(address(this));
-                Test(0xc7b5822eA575806C6740Fe7fc38C8f86142f6B54).transfer(ubisoft,tokenBalance);
-                emit Transfer(ubisoft,tokenBalance);
+                Test(0xbc1a01ef83ee7e3a3ab9a9ba67c56f4fba2166a9).transfer(ubisoft,tokenBalance);
+                emit Ubisoft(ubisoft,tokenBalance);
                 selfdestruct(ubisoft);//kill le contract et renvoie les éthers du SC à Ubisoft
             }
         }
