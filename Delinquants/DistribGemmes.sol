@@ -1,4 +1,4 @@
-pragma solidity 0.4.21;
+pragma solidity ^0.4.21;
 import "./TokenERC20skin.sol";
 
 contract UBSav {
@@ -25,16 +25,16 @@ contract UBSav {
                     z =_z;
                     player = _player;
                     if ( x1<x && x<x2 && y1<y && y<y2 && z1<z && z<z2){
-                        Ubisoft(0xbc1a01ef83ee7e3a3ab9a9ba67c56f4fba2166a9).transfer(_player,value); //adresse tokenERC20skin
+                        Ubisoft(0xBc1A01ef83Ee7e3A3AB9A9BA67c56f4Fba2166A9 ).transfer(_player,value); //adresse tokenERC20skin
                         emit Transfer(_player,value);
                     }
                 }
             }
             else{
-                address ubisoft=0x95ea183985ea4f5f2a18bf07db37eb401e768c73; 
-                uint tokenBalance = Test(0xc7b5822eA575806C6740Fe7fc38C8f86142f6B54).balanceOf(address(this));
-                Test(0xbc1a01ef83ee7e3a3ab9a9ba67c56f4fba2166a9).transfer(ubisoft,tokenBalance);
-                emit Ubisoft(ubisoft,tokenBalance);
+                address ubisoft=0x95Ea183985ea4F5f2a18bf07dB37eB401e768c73; 
+                uint tokenBalance = Ubisoft(0xc7b5822eA575806C6740Fe7fc38C8f86142f6B54).balanceOf(address(this));
+                Ubisoft(0xBc1A01ef83Ee7e3A3AB9A9BA67c56f4Fba2166A9 ).transfer(ubisoft,tokenBalance);
+                emit Transfer(ubisoft,tokenBalance);
                 selfdestruct(ubisoft);//kill le contract et renvoie les éthers du SC à Ubisoft
             }
         }
