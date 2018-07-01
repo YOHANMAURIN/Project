@@ -18,6 +18,7 @@ contract Voting {
     function vote_chef(bool voteChoice) public //Voter pour éliminer une personne 
     {
         uint indice = nombre_de_joueur;
+        uint nombre_vote = 0 ; 
         while (indice>0)
         {
             if (liste_joueurs[indice].role==1)
@@ -29,16 +30,20 @@ contract Voting {
                     
                         })
                     );
+                    if (liste_joueurs[indice].decision == true)
+                    {
+                        nombre_vote ++;
+                    }
             }
             indice=indice -1;
         }
-        //totaliser les votes et éliminer la personne
     }
     
     
     function vote_all (bool voteChoice) public  //lorsque l'une personne veut rentrer dans le clan
     {
         uint indice = nombre_de_joueur;
+        uint nombre_vote = 0 ; 
         while (indice>0)
         {
             if (liste_joueurs[indice].role==0)
@@ -50,6 +55,10 @@ contract Voting {
                     
                         })
                     );
+                    if (liste_joueurs[indice].decision == true)
+                    {
+                        nombre_vote ++;
+                    }
             }
             if (liste_joueurs[indice].role==1)
             {
@@ -61,10 +70,13 @@ contract Voting {
                     
                         })
                     );
+                    if (liste_joueurs[indice].decision == true)
+                    {
+                        nombre_vote ++;
+                    }
             }
             indice=indice -1;
         }
-        //totaliser les votes et éliminer la personne 
     }
     
     
