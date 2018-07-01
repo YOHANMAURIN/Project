@@ -1,7 +1,8 @@
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.21;
 contract Voting {
     
     uint public nombre_de_joueur;
+    bool majority = false;
     
     struct Joueurs
     {
@@ -36,6 +37,9 @@ contract Voting {
                     }
             }
             indice=indice -1;
+        }
+        if ((nombre_de_joueur/nombre_vote)*100>50){
+            majority = true;
         }
     }
     
@@ -77,12 +81,13 @@ contract Voting {
             }
             indice=indice -1;
         }
+        if ((nombre_de_joueur/nombre_vote)*100>50){
+            majority = true;
+        }
     }
-    
     
     function kill() public {
         if (msg.sender == owner) selfdestruct(owner);
     }
     
-
 }
