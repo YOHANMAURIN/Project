@@ -18,7 +18,7 @@ contract Voting {
     
     mapping(address => uint) public vote_contre;
     
-    function vote_chef(address voteChoice) public
+    function vote_chef(address voteChoice) public //Voter pour éliminer une personne 
     {
         uint indice = nombre_de_joueur;
         while (indice>0)
@@ -41,7 +41,7 @@ contract Voting {
     }
     
     
-    function vote_all (address voteChoice) public
+    function vote_all (address voteChoice) public  //lorsque l'une personne veut rentrer dans le clan
     {
         uint indice = nombre_de_joueur;
         while (indice>0)
