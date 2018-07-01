@@ -1,16 +1,13 @@
 # The Division : Battle for Paris
 
 This project was done by a team of people from Startups ,Banks and Public company at the Ubisoft hackathon of July 2018. It is a Blockchain based game that  innovate the way people are interacting with the players .
-It is based on an Ethereum based network.
-
+It is based on an Ethereum permittioned network firstly and then on public network where the advancement in term of privacy and scalability will be more mature.
 
 # Testnet
     $ geth --testnet --rpc --rpcapi 'web3,eth,debug, personal, miner' --rpccorsdomain="*"
 
     $ geth --testnet attach http://localhost:8545
     $ geth --preload autoSetup.js --testnet attach http://localhost:8545                 
-
-
 
 # Private
     $ geth --dev --rpc --rpcapi 'web3,eth,debug' --rpccorsdomain="*" --datadir /tmp/ethereum_dev_mode
