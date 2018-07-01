@@ -24,3 +24,14 @@ It is based on an Ethereum based network.
 # deploy a contract
 ## timestamp as parameter
     /deployContract 212212121
+
+## Useful links
+To get started you can find an introduction to the language in the [Solidity documentation](https://solidity.readthedocs.org). In the documentation, you can find [code examples](https://solidity.readthedocs.io/en/latest/solidity-by-example.html) as well as [a reference](https://solidity.readthedocs.io/en/latest/solidity-in-depth.html) of the syntax and details on how to write smart contracts.
+
+You can start using [Solidity in your browser](http://remix.ethereum.org) with no need to download or compile anything.
+
+If you are interested in our research concerning the exchanges on Skins [here](https://github.com/omisego/plasma-cash).
+
+Indeed in order to be able to 
+
+Solidity is still under development. So please do not hesitate and open an [issue in GitHub](https://github.com/ethereum/solidity/issues) if you encounter anything strange.
