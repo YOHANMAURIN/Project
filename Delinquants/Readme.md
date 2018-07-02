@@ -29,6 +29,8 @@ You can start using [Solidity in your browser](http://remix.ethereum.org) with n
 
 If you are interested in our research concerning the exchanges on Skins [here](https://github.com/omisego/plasma-cash).
 
-Indeed in order to be able to 
-
 Solidity is still under development. So please do not hesitate and open an [issue in GitHub](https://github.com/ethereum/solidity/issues) if you encounter anything strange.
+
+Feel free to post issues !!
+
+We will add the support to exchange ERC20 <--> ERC721 
