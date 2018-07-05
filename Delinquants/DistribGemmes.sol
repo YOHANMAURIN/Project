@@ -1,3 +1,5 @@
+// adresse contrat https://ropsten.etherscan.io/address/0x388cd4db6f12a5e51cc6222b39200f79f439e092
+
 pragma solidity ^0.4.21;
 import "./Gemmes.sol";
 
