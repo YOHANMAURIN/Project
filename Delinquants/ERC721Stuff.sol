@@ -1,3 +1,5 @@
+//adresse contrat https://ropsten.etherscan.io/token/0xc53ed6af8b2db78b3f3fc5dd05832cb351101da5#balances
+
 pragma solidity ^0.4.21;
 
 
