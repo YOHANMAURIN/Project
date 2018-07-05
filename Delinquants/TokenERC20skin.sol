@@ -1,3 +1,5 @@
+//adresse token https://ropsten.etherscan.io/token/0xbc1a01ef83ee7e3a3ab9a9ba67c56f4fba2166a9
+
 pragma solidity ^0.4.21;
 
 /**
