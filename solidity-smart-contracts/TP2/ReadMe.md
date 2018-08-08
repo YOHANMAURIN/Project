@@ -1,4 +1,4 @@
-Création d'un token de fidélité pour le Groupe Casino - Projet réalisé par Maurin Yohan - Cysique Frédéric - Lopes Wendy
+Création d'un token de fidélité pour le Groupe Casino - Projet réalisé par Maurin Yohan 
 
 - Quelle sera la valeur ?
 <br>Notre token s'appelle le Caz. De plus, 5 Caz = 1$.</br>
