@@ -1,0 +1,1 @@
+Voici un bitcoin explorer baisc qui permet de voir tout simplement de voir le prix du bitcoin actuellement, la difficulté pour résoudre l'algorithme de minage, le temps entre 2 blocks et le nombre de block. 
