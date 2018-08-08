@@ -1,4 +1,4 @@
-Acte de notaire et proof of existence - Projet réalisé par Maurin Yohan - Cysique Frédéric - Lopes Wendy
+Acte de notaire et proof of existence - Projet réalisé par Maurin Yohan 
 
 <br>Comme vous pouvez le voir le smart contract est très basique il permet juste de stocker un string et ce string sera le hash du document notarial. </br>
 
