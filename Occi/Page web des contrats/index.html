@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>URP</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="./node_modules/web3/dist/web3.min.js"></script> 
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>Universal Reward Protocol</h1>
+
+        <h2 id="sendcoin"></h2>
+
+        <label for="name" class="col-lg-2 control-label">x1 = 9000000</label>
+
+        <label for="name" class="col-lg-2 control-label">x2 = 11000000</label>
+		
+        <label for="name" class="col-lg-2 control-label">y1 = 33000000</label>
+		
+	<label for="name" class="col-lg-2 control-label">y2 = 35000000</label>
+		
+	<label for="name" class="col-lg-2 control-label">z1 = 200</label>
+		
+	<label for="name" class="col-lg-2 control-label">z2 = 400</label>
+		
+	<label for="name" class="col-lg-2 control-label">Address retailer = 0x95Ea183985ea4F5f2a18bf07dB37eB401e768c73</label>
+
+	<label for="name" class="col-lg-2 control-label">Value = 10 URP</label>
+		
+	<label for="name" class="col-lg-2 control-label">x</label>
+        <input id="x" type="text">
+		
+	<label for="name" class="col-lg-2 control-label">y</label>
+        <input id="y" type="text">
+		
+	<label for="name" class="col-lg-2 control-label">z</label>
+        <input id="z" type="text">
+		
+	<label for="name" class="col-lg-2 control-label">shopper</label>
+        <input id="shopper" type="text">
+		
+        <button id="button">Push Data</button>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <script>
+        if (typeof web3 !== 'undefined') { //mettre metamask ou Mist à la place de undefined pour le tesnet ou le mainnet
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        }
+		
+		
+        web3.eth.defaultAccount = web3.eth.accounts['0x95Ea183985ea4F5f2a18bf07dB37eB401e768c734']; //web3.eth.accounts[]
+        var URPContract = web3.eth.contract([
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getSendCoin",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_x",
+				"type": "uint32"
+			},
+			{
+				"name": "_y",
+				"type": "uint32"
+			},
+			{
+				"name": "_z",
+				"type": "uint32"
+			},
+			{
+				"name": "_shopper",
+				"type": "address"
+			}
+		],
+		"name": "SendCoin",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	}
+]); //ABI
+			web3.eth.accounts.forEach (account => { 
+			balance = web3.eth.getBalance (account); 
+			console.log (balance); 
+			})
+        var URPav = URPContract.at('0x0a7bd51d779fd7329ddea5c65d45c1a5f5769094');
+        console.log(URPav);
+		URPav.getSendCoin(function(error, result){
+            if(!error)
+                {
+                    $("#sendcoin").html(result[0]+' = x / y = '+result[1]+' / z = '+result[2]+' / shopper = '+result[3]);
+                    console.log(result);
+                }
+            else
+                console.error(error);
+        });
+        $("#button").click(function() {
+		
+	URPav.SendCoin($("#x").val(), $("#y").val(), $("#z").val(), $("#shopper").val(),function(error, result){
+            if(!error)
+                {
+                    console.log(result);
+                }
+            else
+                console.error(error);
+        });
+		});
+    </script>
+
+</body>
+</html>
