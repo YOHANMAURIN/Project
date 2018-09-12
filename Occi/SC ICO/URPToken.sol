@@ -303,7 +303,7 @@ contract PausableToken is StandardToken, Pausable {
 }
 
 contract UniversalRewardProtocolToken is StandardToken, PausableToken {
-  string public constant name = 'Univeral Reward Protocol';                                      // Set the token name for display
+  string public constant name = 'Universal Reward Protocol';                                      // Set the token name for display
   string public constant symbol = 'URP';                                       // Set the token symbol for display
   uint8 public constant decimals = 18;                                          // Set the number of decimals for display
   uint256 public constant INITIAL_SUPPLY = 50000000000 * 10**uint256(decimals);  // 50 billions of URP
