@@ -1,4 +1,4 @@
-const { assertRevert } = require ('../test/assertRevert')
+const { assertRevert } = require ('./assertRevert')
 const URPToken = artifacts.require('./UniversalRewardProtocolToken.sol')
 
 const BigNumber = web3.BigNumber;
