@@ -1,5 +1,4 @@
-const should = require('chai')
-  .should();
+const should = require('chai').should();
 
 async function assertRevert (promise) {
   try {
