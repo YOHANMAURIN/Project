@@ -27,7 +27,7 @@ To get started you can find an introduction to the language in the [Solidity doc
 
 You can start using [Solidity in your browser](http://remix.ethereum.org) with no need to download or compile anything.
 
-If you are interested in our research concerning the exchanges on Skins [here](https://github.com/omisego/plasma-cash).
+If you are interested in our research concerning the exchanges on Skins [here](https://github.com/loomnetwork/transfer-gateway-example).
 
 Solidity is still under development. So please do not hesitate and open an [issue in GitHub](https://github.com/ethereum/solidity/issues) if you encounter anything strange.
 
