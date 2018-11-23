@@ -1,7 +1,6 @@
 # The Division : Battle for Paris
 
-This project was done by a team of people from Startups ,Banks and Public company at the Ubisoft hackathon of July 2018. It is a Blockchain based game that  innovate the way people are interacting with the players .
-It is based on an Ethereum permittioned network firstly and then on public network where the advancement in term of privacy and scalability will be more mature.
+This project was done by a team of people from Startups, Banks and Public company at the Ubisoft hackathon of July 2018. It is a Blockchain based game that innovates the way people are interacting with the players. It is based on an Ethereum permitted network firstly and then on a public network where the advancement in term of privacy and scalability will be more mature.  
 
 # Testnet
     $ geth --testnet --rpc --rpcapi 'web3,eth,debug, personal, miner' --rpccorsdomain="*"
@@ -11,16 +10,10 @@ It is based on an Ethereum permittioned network firstly and then on public netwo
 
 # Private
     $ geth --dev --rpc --rpcapi 'web3,eth,debug' --rpccorsdomain="*" --datadir /tmp/ethereum_dev_mode
-    $ geth --dev --preload autoSetup.js  attach ipc:/tmp/ethereum_dev_mode/geth.ipc
 
 
 # Check balance
     web3.fromWei(eth.getBalance(eth.accounts[0]), "ether") + " ether"
-
-
-# deploy a contract
-## timestamp as parameter
-    /deployContract 212212121
 
 ## Useful links
 To get started you can find an introduction to the language in the [Solidity documentation](https://solidity.readthedocs.org). In the documentation, you can find [code examples](https://solidity.readthedocs.io/en/latest/solidity-by-example.html) as well as [a reference](https://solidity.readthedocs.io/en/latest/solidity-in-depth.html) of the syntax and details on how to write smart contracts.
