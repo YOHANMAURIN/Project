@@ -1,7 +1,24 @@
 pragma solidity ^0.4.0;
 contract Load {
     
+    //ajout entre les comm
+    uint public numbers_of_members;
+    bool majority = false;
     
+    struct community
+    {
+    address addressparticipants;
+    uint256 credit; 
+    bool decision;
+    }
+    
+    Joueurs[] public liste_members; // la liste s'initialise à 0
+    
+    address public owner;
+    function owned() public { owner = msg.sender; }
+
+    //
+
     uint public caisse;
     bool voted1;
     bool voted2;
