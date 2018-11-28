@@ -1,10 +1,10 @@
-Acte de notaire et proof of existence - Projet réalisé par Maurin Yohan 
+Notary Act and Proof of Existence - Project by Maurin Yohan
 
-<br>Comme vous pouvez le voir le smart contract est très basique il permet juste de stocker un string et ce string sera le hash du document notarial. </br>
-
-
-<br>Comment avoir le hash ?</br>
-<br>A terme il y aura une partie front end qui permettra de déposer un document, ensuite une partie middle office qui permettra de hasher le document avec la fonction de hashage SHA256 et une partie back end qui va récupéré le hash et qui va interagir avec le smart-contract. Finalement après ces  3 parties nous avons donc le hash stocké dans la blockchain. Nous nous avons uniquement fait le smart contract </br>
+<br> As you can see the smart contract is very basic it just allows to store a string and this string will be the hash of the notarial document. </ Br>
 
 
-Attention: En aucun cela permet de stocker notre document, en revanche cela permet de savoir si notre document a été modifié. Il suffit de hasher notre document et de comparer les 2 hashs pour savoir si il a été modifié. 
+<br> How to have hash? </ br>
+<br> In the long run, there will be a front end part that will allow to file a document, then a middle office part that will allow to hash the document with the hash function SHA256. Finally, a back end party that will recover the hash and will interact with the smart-contract. Finally after using these 3 parts we have the hash stored in the blockchain. Here there is only the smart-contract </ br>
+
+
+Warning: In no way can you store your document, but it allows you to know if our document has been modified. Just haveher your document and compare the 2 hashes to see if it has been modified. 
