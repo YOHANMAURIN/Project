@@ -1,30 +1,27 @@
-Jeu du loup garou - Projet réalisé par Maurin Yohan
+Werewolf Game - Project directed by Maurin Yohan
 
-- Y-a-t-il un organisateur désigné ?
-<br> Le meneur du jeu </br>
+- Is there a designated organizer?
+<br> The leader of the game </ br>
 
-- Qui seront les votants ?
-<br>Les votants pour le smart contract de nuit sont les loups-garou
-Les votants pour le smart contract de jour sont l'ensemble des villageois</br>
+- Who will be the voters?
+<br> Voters for the night smart contract are the werewolves
+Voters for the day smart contract are all villagers </ br>
 
-- Quelles seront les propositions ?
-<br>Les propositions pour les votants du smart contract de nuit (les loups-garou) sont ceux pour le smart contract de jour précédent, eux exclues.
- Les propositions pour les votants du smart contract de jour sont ceux pour le smart contract de nuit précédent, loups garous compris </br>
+- What will the proposals be?
+<br> The proposals for the voters of the night smart contract (the werewolves) are are those for the smart contract of the previous day, with excluded werewolves.
+  The proposals for the voters of the smart day contract are those for the smart contract of the night before, including werewolves </ br>
 
-- Qui peut ajouter une proposition ?
-<br>Le meneur</br>
+- Who can add a proposal?
+<br> The leader </ br>
 
-- Combien de temps durera le vote ?
-<br>Le vote durera tant que la partie ne sera pas terminée, à savoir tant que l'avant-dernier joueur d'un camps ne sera pas encore éliminé</br>
+- How long will the vote take?
+<br> The vote will last until the game is over, as long as the penultimate player of a camp is not eliminated yet </ br>
 
-- Comment seront calculés les résultats ?
-<br>La personne ayant le max de vote sera éliminé. 
-En cas d'égalité on fait un nouveau vote entre les personnes a égalité. 
-En cas de nouvelle égalité on elimine au hasard parmis les personnes a égalité</br>
+- How will the results be calculated?
+<br> The person with the most votes will be eliminated.
+In case of a tie, a new vote is held between the tied persons.
+In case of a new tie, one is eliminated at random from among the tied ones </ br>
 
-- Peut-on faire des délégations ? Comment ?
-<br>Non</br>
-
-- Quelles informations a-t-on sur les votants ? Comment s'assure-t-on que chacun ne vote que le nombre de fois autorisé ?
-<br>Liste pour tout le monde si elle est initialiser à 1 c'est un loup-garou, a 0 c'est un villageois
-A chaque adresse on associe un vote, s'il a deja voté il ne pourra voter à nouveau</br>
+- What information is available on voters? How do we make sure everyone votes only the number of times allowed?
+<br> There is a list with all the voters, if the ith element of the list is a 1 it is a werewolf and if it is 0 it is a villager
+At each address we associate a vote, if it has already voted it will not be able to vote again </ br>
