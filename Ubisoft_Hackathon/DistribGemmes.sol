@@ -27,7 +27,7 @@ contract UBSav {
                     z =_z;
                     player = _player;
                     if ( x1<x && x<x2 && y1<y && y<y2 && z1<z && z<z2){
-                        Gemmes(0xD4008fAEdb116C166EacE4cDf4CBb7853df7C519).transfer(_player,value); //adresse tokenERC20skin
+                        Gemmes(0xD4008fAEdb116C166EacE4cDf4CBb7853df7C519).transfer(_player,value); //adresse tokenERC20 gemmes
                         emit Transfer(_player,value);
                     }
                 }
