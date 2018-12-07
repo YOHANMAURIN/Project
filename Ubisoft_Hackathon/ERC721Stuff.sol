@@ -1,5 +1,3 @@
-//adresse contrat https://ropsten.etherscan.io/token/0xc53ed6af8b2db78b3f3fc5dd05832cb351101da5#balances
-
 pragma solidity ^0.4.21;
 
 
@@ -110,7 +108,7 @@ contract SupportsInterfaceWithLookup is ERC165 {
  * @title SafeMath
  * @dev Math operations with safety checks that throw on error
  */
-library SafeMath {
+library SafeMath2 {
 
   /**
   * @dev Multiplies two numbers, throws on overflow.
@@ -252,7 +250,7 @@ contract ERC721BasicToken is SupportsInterfaceWithLookup, ERC721Basic {
    *   bytes4(keccak256('exists(uint256)'))
    */
 
-  using SafeMath for uint256;
+  using SafeMath2 for uint256;
   using AddressUtils for address;
 
   // Equals to `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`
