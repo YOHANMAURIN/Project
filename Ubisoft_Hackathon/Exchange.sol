@@ -1,21 +1,21 @@
-pragma solidity ^0.4.24;
+Contract address : https://ropsten.etherscan.io/address/0xcb202c67043614ac0e5191d40df64b7485d346c5
 
-import "./Gemme.sol"; 
+pragma solidity ^0.4.21;
+
+import "./Gemmes.sol"; 
 import "./ERC721Token.sol";
 
 contract Exchange {
 
-//convert x ERC20 against 1 ERC71
-//Est ce que c'est mieux de burn les tokens à chaque fois (décentralisé) ou de les envoyer à une address conrrespondant à l'émetteur du jeu
-function Swap (uint256 valueERC20) public {
-    stuff = ERC721Token(0xc53ed6af8b2db78b3f3fc5dd05832cb351101da5);
-    gemmes = Gemmes(0xD4008fAEdb116C166EacE4cDf4CBb7853df7C519);
-    gemmes.burn(valueERC20);
-    tokenId= uint(block.blockhash(block.number-1));//il n'est pas possible de générer un nombre aléatoire, on se base sur le hash du dernier bloc généré, converti en entier
-    while (stuff.tokenURI(tokenId) != ""){ //token URI renvoie l'URI grâce à l'id du token si la fonction renvoie une chaine de 
-	tokenId = tokenId + 1;	//caractère vide cela veut dire que l'id n'existe pas
-	}
+uint256 Token_id = 0;
 
-    stuff._mint(msg.sender, tokenId);
-}
+/**
+ *  Before executing the Swap function use the approve function of the Gems Contract (0xe02005819E60b16E3eBaa040df7d3394AF9AC12e), allocate a portion of your funds to this contract.
+ *  Convert x ERC20 against 1 ERC71
+ */
+function Swap (uint256 valueERC20) public {
+    Gemmes(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e).burnFrom(msg.sender,valueERC20);
+    ERC721Token(0x53ffb614D35cCB4E8e6E7Bd78AdEB4eD10d5eE36)._mint(msg.sender, Token_id);
+    Token_id=Token_id + 1;
+    }
 }
