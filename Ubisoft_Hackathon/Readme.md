@@ -46,7 +46,11 @@ Vote --> système de vote au sein d'une faction (i.e clan) pour des décisions p
 Exchange --> permet de swap x gemmes (x tokens ERC20) contre du stuff (1 token ERC721)
 Distribut gemmes --> SC lié à une page html (utilisation de web3) pour pourvoir rewarder une personne se trouvant à une certaine localisation. Dans le cadre de ce projet il est imaginé qu'il y aura un contrat déployé par lieu où l'on peut trouver des gemmes. De plus il faut mettre des gemmes (des tokens) dans le contrat pour recevoir ensuite une reward, de plus seul le honnor du SC peut intéragir avec. Il sert donc à la transparence.
 
-Swap SC
+Spécificité SC
+
+Exchange SC
 ATTENTION: Before executing the Swap function use the approve function of the Gems Contract(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e), allocate a portion of your funds to this contract. (Toute aide est bienvenue pour ne pas avoir besoin de faire ça)
 Car si l'on met ceci "Gemmes(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e).approve(contract_address,value_gemmes);" dans la fonction Swap cela ne va pas permettre au contrat de dépenser vos tokens.
 Remarque : A la place de burn les tokens, il peut être également possible de les envoyer à une entité centrale comme Ubisoft
+ERC721Token
+N'importe qui peut minter ces tokens, si quelqu'un mint un token directement avec ce contrat cela va faire péter le contrat exchange par rapport à l'id à un moment
