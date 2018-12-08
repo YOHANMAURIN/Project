@@ -1,7 +1,7 @@
 # The Division : Battle for Paris
 
 This project was done by a team of people from Startups ,Banks and Public company at the Ubisoft hackathon of July 2018. It is a Blockchain based game that  innovate the way people are interacting with the players .
-It is based on an Ethereum permittioned network firstly and then on public network where the advancement in term of privacy and scalability will be more mature.
+At the moment we use the testnet Ropsten but eventually we will use an Ethereum permittioned network firstly and then on public network where the advancement in term of privacy and scalability will be more mature.
 
 ## Smart-contracts explanation
 
