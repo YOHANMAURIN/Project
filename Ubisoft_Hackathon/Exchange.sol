@@ -3,9 +3,9 @@ Contract Address : https://ropsten.etherscan.io/token/0x722f49a5460a934f0c7af7b3
 pragma solidity ^0.4.21;
 
 import "./Gemmes.sol"; 
-import "./ERC721Token.sol";
+import "./ERC721Toke.sol";
 
-contract Exchange {
+contract Exchange is ERC721Token {
 
 uint256 Token_id = 0;
 
@@ -15,7 +15,7 @@ uint256 Token_id = 0;
  */
 function Swap (uint256 valueERC20) public {
     Gemmes(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e).burnFrom(msg.sender,valueERC20);
-    ERC721Token(0x53ffb614D35cCB4E8e6E7Bd78AdEB4eD10d5eE36)._mint(msg.sender, Token_id);
+    ERC721Token._mint(msg.sender, Token_id);
     Token_id=Token_id + 1;
     }
 }
