@@ -49,7 +49,6 @@ Distribut gemmes --> SC lié à une page html (utilisation de web3) pour pourvoi
 
 
 Exchange SC
-ATTENTION: Before executing the Swap function use the approve function of the Gems Contract(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e), allocate a portion of your funds to this contract. (Toute aide est bienvenue pour ne pas avoir besoin de faire ça)
-Car si l'on met ceci "Gemmes(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e).approve(contract_address,value_gemmes);" dans la fonction Swap cela ne va pas permettre au contrat de dépenser vos tokens.
-Remarque : A la place de burn les tokens, il peut être également possible de les envoyer à une entité centrale comme Ubisoft
-ERC721Token
+ATTENTION: Before executing the Swap function use the approve function of the Gems Contract(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e), allocate a portion of your funds to this contract. (Any help is welcome to not need to do this)
+Because if we put this "Gemmes(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e).approve(contract_address,value_gemmes);" in swap function this will not allow the contract to spend your tokens.
+Note: In place of burn tokens, it may also be possible to send them to a central entity such as Ubisoft.
