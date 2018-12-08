@@ -1,4 +1,4 @@
-Contract Address : https://ropsten.etherscan.io/address/0x0d7f508578be2684bb42584b61289693407d90c2
+Contract Address : https://ropsten.etherscan.io/token/0x722f49a5460a934f0c7af7b35a15ccc8b3a6bf99
 
 pragma solidity ^0.4.21;
 
