@@ -56,7 +56,7 @@ Distribut gemmes --> SC linked to a html page (use of web3) to reward a person a
 
 
 
-Exchange SC :
+#Exchange SC :
 <br> ATTENTION: Before executing the Swap function use the approve function of the Gems Contract(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e), allocate a portion of your funds to this contract. (Any help is welcome to not need to do this)</br>
 Because if we put this "Gemmes(0xe02..).approve(contract_address,value_gemmes);" in swap function this will not allow the contract to spend your tokens.
 
