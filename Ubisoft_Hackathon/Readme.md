@@ -42,17 +42,17 @@ Find a system that allows you no longer need to manually allocate the right to t
 
 ## Explanation contract
 
-ERC721 stuff --> élément unique qui représente un stuff d'un personnage (armure, couteau, arme, genouillère etc..)
+ERC721 stuff --> Each token is unique and represents a character's stuff (armor, knife, weapon, knee pad etc.)
 
-ERC20 gemmes --> monnaie du jeu qui s'obtient uniquement en jouant (impossible d'en acheter contre de l'argent)
+ERC20 gemmes --> Currency of the game which is obtained only by playing (impossible to buy for money)
 
-ERC20 skin --> élément uniquement utilisé pour l'apparence du joueur mais qui ne permet pas d'améliorer ses performances. Est ce que un skin est unique ? pq pas un 721 ?
+ERC20 skin --> Currency that allows to buy skins that can customize the appearance of the player but does not improve its performance.
 
-Vote --> système de vote au sein d'une faction (i.e clan) pour des décisions prisent au sein du clan (proposition de personne à exlure, affrontement faction ennemie, etc...)
+Vote --> System of voting within a faction (i.e clan) for decisions taken within the faction (proposal of person to exlure, confrontation faction enemy, etc ...)
 
-Exchange --> permet de swap x gemmes (x tokens ERC20) contre du stuff (1 token ERC721)
+Exchange --> Lets you trade x gemmes (x tokens ERC20) for one stuff (1 token ERC721)
 
-Distribut gemmes --> SC lié à une page html (utilisation de web3) pour pourvoir rewarder une personne se trouvant à une certaine localisation. Dans le cadre de ce projet il est imaginé qu'il y aura un contrat déployé par lieu où l'on peut trouver des gemmes. De plus il faut mettre des gemmes (des tokens) dans le contrat pour recevoir ensuite une reward, de plus seul le honnor du SC peut intéragir avec. Il sert donc à la transparence.
+Distribut gemmes --> SC linked to a html page (use of web3) to reward a person at a certain location. As part of this project, it is imagined that there will be a contract deployed by place where we can find gems. Futhermore, it is necessary to put gems (tokens) in the contract to receive then a reward, moreover only the honor of the SC can interact with. It is therefore used for transparency.
 
 
 
