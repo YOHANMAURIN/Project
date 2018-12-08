@@ -1,6 +1,6 @@
-Micro funding community est un projet où un pot commun est créé au sein d’une communauté pour subvenir au besoin que pourrait avoir les personnes de cette communauté.
-Cela fonctionne de la manière suivante :
--	Une personne demande un microcrédit pour financer son projet. De plus il met un deadline à partir duquel il ne sera plus possible de voter.
--	Les autres personnes votent le projet (True/False)
--	Une fois le deadline atteint, le smart contract se lance. Il permet de savoir si la majorité ont voté True, dans ce cas le projet est validé.
--	Une fois le projet validé le smart contract effectue le transfert d’argent du pot commun à la personne qui a émis le projet.
+Micro funding community is a project where a common pot is created within a community to provide for the needs of people in this community.
+It works as follows:
+- A person asks for a microcredit to finance his project. In addition, he puts an end of vote deadline.
+- Other people vote on the project (True / False)
+- Once the deadline is reached, the smart contract is launched. It allows to know if the majority voted True, in this case the project is validated.
+- Once the project has been validated, the smart contract transfers the money from the common pot to the person who issued the project.
