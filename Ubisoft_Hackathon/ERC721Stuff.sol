@@ -1,5 +1,3 @@
-Contract address : https://ropsten.etherscan.io/address/0xfdeb4dab69e0e1e3355a50cd60b782cb2c844b0e
-
 pragma solidity ^0.4.21;
 
 
@@ -490,7 +488,7 @@ contract ERC721BasicToken is SupportsInterfaceWithLookup, ERC721Basic {
    * @param _to The address that will own the minted token
    * @param _tokenId uint256 ID of the token to be minted by the msg.sender
    */
-  function _mint(address _to, uint256 _tokenId) public  {
+  function _mint(address _to, uint256 _tokenId) internal {
     require(_to != address(0));
     addTokenTo(_to, _tokenId);
     emit Transfer(address(0), _to, _tokenId);
@@ -742,7 +740,7 @@ contract ERC721Token is SupportsInterfaceWithLookup, ERC721BasicToken {
    * @param _to address the beneficiary that will own the minted token
    * @param _tokenId uint256 ID of the token to be minted by the msg.sender
    */
-  function _mint(address _to, uint256 _tokenId) public {
+  function _mint(address _to, uint256 _tokenId) internal {
     super._mint(_to, _tokenId);
 
     allTokensIndex[_tokenId] = allTokens.length;
