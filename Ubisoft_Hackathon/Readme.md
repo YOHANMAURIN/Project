@@ -32,25 +32,24 @@ If you are interested in our research concerning the exchanges on Skins [here](h
 Solidity is still under development. So please do not hesitate and open an [issue in GitHub](https://github.com/ethereum/solidity/issues) if you encounter anything strange.
 
 Feel free to post issues !!
-//We will add the support to exchange ERC20 <--> ERC721  DONE ?
 
 #Improvement
-Put a metadata in the ERC721 token, with the same matters than crytokitties.
-Repass the _mint fonction i the ERC721Stuff in internal and only possible to call her with the contract Exchange
+Make a system of metadata more or less rare in the ERC721 token, with the same matters than crytokitties. Then add in the SC exchange a pseudo-random system which takes into consideration the number of gems exchanged, which would have more or less rare metadata.
+Find a system that allows you no longer need to manually allocate the right to the contract to spend our funds.
+
 
 #Explanation contract
 ERC721 stuff --> élément unique qui représente un stuff d'un personnage (armure, couteau, arme, genouillère etc..)
 ERC20 gemmes --> monnaie du jeu qui s'obtient uniquement en jouant (impossible d'en acheter contre de l'argent)
-ERC20 skin --> élément uniquement utilé pour l'apparence du joueur mais qui ne permet pas d'améliorer ses performances. Est ce que un skin est unique ? pq pas un 721 ?
+ERC20 skin --> élément uniquement utilisé pour l'apparence du joueur mais qui ne permet pas d'améliorer ses performances. Est ce que un skin est unique ? pq pas un 721 ?
 Vote --> système de vote au sein d'une faction (i.e clan) pour des décisions prisent au sein du clan (proposition de personne à virer, affrontement faction ennemie, etc...)
 Exchange --> permet de swap x gemmes (x tokens ERC20) contre du stuff (1 token ERC721)
 Distribut gemmes --> SC lié à une page html (utilisation de web3) pour pourvoir rewarder une personne se trouvant à une certaine localisation. Dans le cadre de ce projet il est imaginé qu'il y aura un contrat déployé par lieu où l'on peut trouver des gemmes. De plus il faut mettre des gemmes (des tokens) dans le contrat pour recevoir ensuite une reward, de plus seul le honnor du SC peut intéragir avec. Il sert donc à la transparence.
 
-Spécificité SC
+
 
 Exchange SC
 ATTENTION: Before executing the Swap function use the approve function of the Gems Contract(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e), allocate a portion of your funds to this contract. (Toute aide est bienvenue pour ne pas avoir besoin de faire ça)
 Car si l'on met ceci "Gemmes(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e).approve(contract_address,value_gemmes);" dans la fonction Swap cela ne va pas permettre au contrat de dépenser vos tokens.
 Remarque : A la place de burn les tokens, il peut être également possible de les envoyer à une entité centrale comme Ubisoft
 ERC721Token
-N'importe qui peut minter ces tokens, si quelqu'un mint un token directement avec ce contrat cela va faire péter le contrat exchange par rapport à l'id à un moment
