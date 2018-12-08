@@ -1,5 +1,4 @@
-#### Micro funding community 
-is a project where a common pot is created within a community to provide for the needs of people in this community.
+Micro funding community is a project where a common pot is created within a community to provide for the needs of people in this community.
 It works as follows:
 - A person asks for a microcredit to finance his project. In addition, he puts an end of vote deadline.
 - Other people vote on the project (True / False)
