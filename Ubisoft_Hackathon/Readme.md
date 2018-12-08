@@ -40,7 +40,7 @@ Make a system of metadata more or less rare in the ERC721 token, with the same m
 Find a system that allows you no longer need to manually allocate the right to the contract to spend our funds.
 
 
-## Explanation contract
+## Smart-contracts explanation
 
 ERC721 stuff --> Each token is unique and represents a character's stuff (armor, knife, weapon, knee pad etc.)
 
@@ -56,7 +56,7 @@ Distribut gemmes --> SC linked to a html page (use of web3) to reward a person a
 
 
 
-### Exchange SC :
+#### Exchange SC :
 
 ATTENTION: Before executing the Swap function use the approve function of the Gems Contract(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e), allocate a portion of your funds to this contract. (Any help is welcome to not need to do this)
 
