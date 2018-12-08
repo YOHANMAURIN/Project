@@ -64,4 +64,4 @@ Because if we put this "Gemmes(0xe02..).approve(contract_address,value_gemmes);"
 
 Note: In place of burn tokens, it may also be possible to send them to a central entity such as Ubisoft.
 
-Feel free to post issues !!
+#### Feel free to post issues !!
