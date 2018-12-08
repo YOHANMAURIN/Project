@@ -2,8 +2,8 @@ Contract Address : https://ropsten.etherscan.io/token/0x722f49a5460a934f0c7af7b3
 
 pragma solidity ^0.4.21;
 
-import "./Gemmes.sol"; 
-import "./ERC721Toke.sol";
+import "./ERC20Gemmes.sol"; 
+import "./ERC721Stuff.sol";
 
 contract Exchange is ERC721Token {
 
