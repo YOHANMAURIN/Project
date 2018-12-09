@@ -26,7 +26,7 @@ Because if we put this "Gemmes(0xe02..).approve(contract_address,value_gemmes);"
 
 Note: In place of burn tokens, it may also be possible to send them to a central entity such as Ubisoft.
 
-#### Index
+### Index
 
 This is a web page where a central entity (which has the address 0x95) can manually send datas (x, y, z, address), if these datas correspond to a GPS position located inside the zone of distribution of gems then the address will receive.
 
