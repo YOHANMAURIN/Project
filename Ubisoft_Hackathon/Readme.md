@@ -3,7 +3,8 @@
 This project was done by a team of people from Startups ,Banks and Public company at the Ubisoft hackathon of July 2018. It is a Blockchain based game that  innovate the way people are interacting with the players .
 At the moment we use the testnet Ropsten but eventually we will use an Ethereum permittioned network firstly and then on public network where the advancement in term of privacy and scalability will be more mature.
 
-## Smart-contracts explanation
+## Code explanation
+### Smart-contracts 
 
 ERC721 stuff --> Each token is unique and represents a character's stuff (armor, knife, weapon, knee pad etc.)
 
@@ -24,6 +25,10 @@ ATTENTION: Before executing the Swap function use the approve function of the Ge
 Because if we put this "Gemmes(0xe02..).approve(contract_address,value_gemmes);" in swap function this will not allow the contract to spend your tokens.
 
 Note: In place of burn tokens, it may also be possible to send them to a central entity such as Ubisoft.
+
+#### Index
+
+This is a web page where a central entity (which has the address 0x95) can manually send datas (x, y, z, address), if these datas correspond to a GPS position located inside the zone of distribution of gems then the address will receive.
 
 ## Improvement
 
