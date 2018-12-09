@@ -66,282 +66,71 @@
         var UBSContract = web3.eth.contract([
 	{
 		"constant": false,
-		"inputs": [
-			{
-				"name": "_spender",
-				"type": "address"
-			},
-			{
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "approve",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "burn",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "account",
-				"type": "address"
-			},
-			{
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "burnFrom",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_spender",
-				"type": "address"
-			},
-			{
-				"name": "_subtractedValue",
-				"type": "uint256"
-			}
-		],
-		"name": "decreaseApproval",
-		"outputs": [
-			{
-				"name": "success",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_spender",
-				"type": "address"
-			},
-			{
-				"name": "_addedValue",
-				"type": "uint256"
-			}
-		],
-		"name": "increaseApproval",
-		"outputs": [
-			{
-				"name": "success",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
 		"inputs": [],
-		"name": "pause",
+		"name": "Refund",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_to",
-				"type": "address"
-			},
-			{
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "transfer",
+		"constant": true,
+		"inputs": [],
+		"name": "getSendCoin",
 		"outputs": [
 			{
 				"name": "",
-				"type": "bool"
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "uint32"
+			},
+			{
+				"name": "",
+				"type": "address"
 			}
 		],
 		"payable": false,
-		"stateMutability": "nonpayable",
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
 		"constant": false,
 		"inputs": [
 			{
-				"name": "_from",
-				"type": "address"
+				"name": "_x",
+				"type": "uint32"
 			},
 			{
-				"name": "_to",
-				"type": "address"
+				"name": "_y",
+				"type": "uint32"
 			},
 			{
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "transferFrom",
-		"outputs": [
+				"name": "_z",
+				"type": "uint32"
+			},
 			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "newOwner",
+				"name": "_shopper",
 				"type": "address"
 			}
 		],
-		"name": "transferOwnership",
+		"name": "SendCoin",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "unpause",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "constructor"
 	},
 	{
 		"anonymous": false,
 		"inputs": [
-			{
-				"indexed": true,
-				"name": "_burner",
-				"type": "address"
-			},
 			{
 				"indexed": false,
-				"name": "_value",
-				"type": "uint256"
-			}
-		],
-		"name": "Burn",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [],
-		"name": "Pause",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [],
-		"name": "Unpause",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"name": "previousOwner",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "OwnershipTransferred",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"name": "spender",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"name": "value",
-				"type": "uint256"
-			}
-		],
-		"name": "Approval",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"name": "to",
+				"name": "_to",
 				"type": "address"
 			},
 			{
@@ -352,153 +141,17 @@
 		],
 		"name": "Transfer",
 		"type": "event"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "_owner",
-				"type": "address"
-			},
-			{
-				"name": "_spender",
-				"type": "address"
-			}
-		],
-		"name": "allowance",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "_owner",
-				"type": "address"
-			}
-		],
-		"name": "balanceOf",
-		"outputs": [
-			{
-				"name": "balance",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "decimals",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint8"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "INITIAL_SUPPLY",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "name",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "paused",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "symbol",
-		"outputs": [
-			{
-				"name": "",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "totalSupply",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
 	}
 ]); //ABI
 			web3.eth.accounts.forEach (account => { 
 			balance = web3.eth.getBalance (account); 
 			console.log (balance); 
+			}); //ABI
+			web3.eth.accounts.forEach (account => { 
+			balance = web3.eth.getBalance (account); 
+			console.log (balance); 
 			})
-        var UBSav = UBSContract.at('0xe02005819E60b16E3eBaa040df7d3394AF9AC12e');
+        var UBSav = UBSContract.at('0xb881edb3fe528ff9412dc364e86685ac2beeb410');
         console.log(UBSav);
 		UBSav.getSendCoin(function(error, result){
             if(!error)
