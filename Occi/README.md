@@ -38,3 +38,4 @@ Moreover, as you can see, if you check the conditions of the campaign then a num
 -It will be necessary for you to buy urp directly from URP or directly on the market to be able to send them on the smart contract which has just been created. If at the end of the campaign date not all the tokens are distributed they will be redistributed again. . 
 
 -In addition, it will also be necessary later that you have some ethers to allow you to make the transfers of URP. Universal Reward Protocol will be able to do it for you but it will take to give them some ethers.
+
