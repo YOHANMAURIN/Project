@@ -4,9 +4,9 @@ This project was done by a team of people from Startups ,Banks and Public compan
 At the moment we use the testnet Ropsten but eventually we will use an Ethereum permittioned network firstly and then on public network where the advancement in term of privacy and scalability will be more mature.
 
 ## Code explanation
-### Smart-contracts 
+### Smart-contracts (SC)
 
-ERC721 stuff --> Each token is unique and represents a character's stuff (armor, knife, weapon, knee pad etc.)
+ERC721 stuff --> Each token is unique and represents a character's stuff (armor, knife, weapon, knee pad, etc...)
 
 ERC20 gemmes --> Currency of the game which is obtained only by playing (impossible to buy for money)
 
@@ -16,11 +16,11 @@ Vote --> System of voting within a faction (i.e clan) for decisions taken within
 
 Exchange --> Lets you trade x gemmes (x tokens ERC20) for one stuff (1 token ERC721)
 
-Distribut gemmes --> SC linked to a html page (use of web3) to reward a person at a certain location. As part of this project, it is imagined that there will be a contract deployed by place where we can find gems. Futhermore, it is necessary to put gems (tokens) in the contract to receive then a reward, moreover only the honor of the SC can interact with. It is therefore used for transparency.
+Distribute Gemmes --> SC linked to a html page (use of web3) to reward a person at a certain location. As part of this project, it is imagined that there will be a contract deployed by place where we can find gems. Futhermore, it is necessary to put gems (tokens) in the contract to receive then a reward, moreover only the honor of the SC can interact with. It is therefore used for transparency.
 
 #### Exchange SC :
 
-ATTENTION: Before executing the Swap function use the approve function of the Gems Contract(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e), allocate a portion of your funds to this contract. (Any help is welcome to not need to do this)
+BE CAREFUL: Before executing the Swap function use the approve function of the Gems Contract(0xe02005819E60b16E3eBaa040df7d3394AF9AC12e), allocate a portion of your funds to this contract. (Any help is welcome to not need to do this)
 
 Because if we put this "Gemmes(0xe02..).approve(contract_address,value_gemmes);" in swap function this will not allow the contract to spend your tokens.
 
