@@ -16,7 +16,7 @@ Vote --> System of voting within a faction (i.e clan) for decisions taken within
 
 Exchange --> Lets you trade x gemmes (x tokens ERC20) for one stuff (1 token ERC721)
 
-Distribute Gemmes --> SC linked to a html page (use of web3) to reward a person at a certain location. As part of this project, it is imagined that there will be a contract deployed by place where we can find gems. Futhermore, it is necessary to put gems (tokens) in the contract to receive then a reward, moreover only the honor of the SC can interact with. It is therefore used for transparency.
+Distribute Gemmes --> SC linked to a html page (https://yohanmaurin.github.io/Project/Ubisoft_Hackathon/), use of web3, to reward a person at a certain location. As part of this project, it is imagined that there will be a contract deployed by place where we can find gems. Futhermore, it is necessary to put gems (tokens) in the contract to receive then a reward, moreover only the honor of the SC can interact with. It is therefore used for transparency.
 
 #### Exchange SC :
 
