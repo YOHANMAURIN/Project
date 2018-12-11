@@ -1,1 +1,2 @@
-Voici quelques projets que j'ai pu faire. La plupart ont été fait durant des hackathons. 
+Here are some projects that I have been able to do. Most were done during hackathons.
+
