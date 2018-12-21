@@ -13,8 +13,8 @@ The number of pawns of different colors is 6 and the colors are in the original 
 
 ## Principle
 
-The goal is to discover the four pawns, i.e. their colors and positions.
-For this, each round, the player must choose 4 pawns where he thinks the correct pawns are concealed.
+The goal is to discover the four pawns, i.e. their colors and positions. For this, each round, the player must choose 4 pawns where he thinks the correct pawns are concealed.
+
 Once the pawns are placed, the code indicates:
 1. The number of pawns of the right color well placed using the same number of black pawns.
 2. The number of pawns of the right color, but poorly placed, with the white pawns.
