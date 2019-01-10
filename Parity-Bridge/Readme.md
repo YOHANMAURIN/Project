@@ -70,8 +70,16 @@ Creation of the second authority:
     curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node1", "node1"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8541
 The address return is 0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2 if you put exactly the same line.
 
-Recap : The node0 has the authority account : 0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e and the user account 0x004ec07d2329997267Ec62b4166639513386F32E.
-The node1 has the authority account: 0x00Aa39d30F0D20FF03a22cCfc30B7EfbFca597C2 
+Recap : The node0 has the authority account : 0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e and the user account 0x004ec07d2329997267Ec62b4166639513386F32E. The node1 has the authority account: 0x00Aa39d30F0D20FF03a22cCfc30B7EfbFca597C2.
+
+You need to add the validor in the blockchain setup. The name of the new file is demo-spec-new.json. Copy-Past this file in demo-spec.json .
+
+#### Execute the authority node :
+
+To run a node as an authority, we must allow it to sign transaction. For that, you have the file node.pwds. Each line contains a password that we used when authoring authority accounts.
+
+Add the authority account in each node :
+You have the new config in the file node0new.toml and the file node1new.toml. Copy paste the files in the files node0 and node1.
 
 
     
