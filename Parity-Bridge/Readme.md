@@ -1,6 +1,6 @@
 # Parity Bridge
 
-This repository aims to explain to you how to deploy a blockchain in Proof of Authority locally on linux, as well as to deploy parity-bridge between your blockchain and a sidechain.
+This aim of the repository is to explain to you how to deploy a blockchain in Proof of Authority locally on linux, as well as to deploy parity-bridge between your blockchain and a sidechain.
 
 ## Setup
 
