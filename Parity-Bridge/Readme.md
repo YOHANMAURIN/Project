@@ -81,6 +81,18 @@ To run a node as an authority, we must allow it to sign transaction. For that, y
 Add the authority account in each node :
 You have the new config in the file node0new.toml and the file node1new.toml. Copy paste the files in the files node0 and node1.
 
+Run again the node:
+
+    parity --config node0.toml
+    parity --config node1.toml
+
+#### Connect the nodes together
+
+Retrieve the enode address of the node0:
+
+    curl --data '{"jsonrpc":"2.0","method":"parity_enode","params":[],"id":0}' -H "Content-Type: application/json" -X POST localhost:8540
+
+
 
     
 
