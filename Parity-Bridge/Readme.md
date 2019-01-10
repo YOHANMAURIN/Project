@@ -70,6 +70,9 @@ Creation of the second authority:
     curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node1", "node1"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8541
 The address return is 0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2 if you put exactly the same line.
 
+Recap : The node0 has the authority account : 0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e and the user account 0x004ec07d2329997267Ec62b4166639513386F32E.
+The node1 has the authority account: 0x00Aa39d30F0D20FF03a22cCfc30B7EfbFca597C2 
+
 
     
 
