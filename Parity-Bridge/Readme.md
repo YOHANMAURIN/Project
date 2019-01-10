@@ -47,6 +47,34 @@ The file node0.toml and node1.toml is to setup the nodes
 
 #### Creation of 3 accounts: 2 authorities accounts and a user account
 
+Run node0:
+
+    parity --config node0.toml
+
+Creation of the first authority: (other terminal)
+
+    curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node0", "node0"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8540
+The address return is 0x00bd138abd70e2f00903268f3db08f2d25677c9e if you put exactly the same line.
+
+Creation of the user:
+
+    curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["user", "user"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8540
+The address return is 0x004ec07d2329997267ec62b4166639513386f32e if you put exactly the same line.
+
+Run node1:
+
+    parity --config node1.toml
+
+Creation of the second authority:
+
+    curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node1", "node1"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8541
+The address return is 0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2 if you put exactly the same line.
+
+
+    
+
+
+
 
 
 
