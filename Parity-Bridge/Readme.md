@@ -2,7 +2,7 @@
 
 This aim of the repository is to explain to you how to deploy a blockchain in Proof of Authority locally on linux, as well as to deploy parity-bridge between your blockchain and a sidechain.
 
-## Setup
+## Setup infrastructure
 
 ### Prerequisite to install truffle 
 
@@ -91,6 +91,46 @@ Run again the node:
 Retrieve the enode address of the node0:
 
     curl --data '{"jsonrpc":"2.0","method":"parity_enode","params":[],"id":0}' -H "Content-Type: application/json" -X POST localhost:8540
+
+Add the RESULT to the node1:
+
+    curl --data '{"jsonrpc":"2.0","method":"parity_addReservedPeer","params":["enode://RESULTAT"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8541
+If the 2 nodes are well connected there is a message containing result: true which is returned.
+
+#### Send token between the accounts
+
+Send token between the user account to the authority of node0:
+
+    curl --data '{"jsonrpc":"2.0","method":"personal_sendTransaction","params":[{"from":"0x004ec07d2329997267Ec62b4166639513386F32E","to":"0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e","value":"0xde0b6b3a7640000"}, "user"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8540
+
+Once the transaction is submitted, a block is published a few seconds later (5 seconds depending on our settings). To verify if the authority of node0 received the funds:
+
+    curl --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e", "latest"],"id":1}' -H "Content-Type: application/json" -X POST localhost:8540
+
+Send token between the user account to the authority of node1:
+
+    curl --data '{"jsonrpc":"2.0","method":"personal_sendTransaction","params":[{"from":"0x004ec07d2329997267Ec62b4166639513386F32E","to":"0x00Aa39d30F0D20FF03a22cCfc30B7EfbFca597C2","value":"0xde0b6b3a7640000"}, "user"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8540
+    
+Verify if the authority of node1 received the funds:
+
+    curl --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x00Aa39d30F0D20FF03a22cCfc30B7EfbFca597C2", "latest"],"id":1}' -H "Content-Type: application/json" -X POST localhost:8541
+
+NB: The value is in hexadecimal (Here is a good converter http://sebastienguillon.com/test/javascript/converter.html). The value is 1 ETH in the above order lines
+
+#### Deploy a node that does not have authority:
+
+You have the config on the file node3.toml 
+
+Run node3:
+     
+    parity --config node1.toml
+    
+You can connect this node to the user in the same way as we did above.
+
+## Setup Parity-Bridge
+
+
+
 
 
 
