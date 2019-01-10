@@ -123,7 +123,7 @@ You have the config on the file node3.toml
 
 Run node3:
      
-    parity --config node1.toml
+    parity --config node3.toml
     
 You can connect this node to the user in the same way as we did above.
 
