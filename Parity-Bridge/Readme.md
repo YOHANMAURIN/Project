@@ -183,11 +183,18 @@ There are two possibilities :
 * You can setup a second sidechain who are exactly the same setup than Ropten. You have this setup of the chain in the file "spec.json"
 You need to set-up a new node for this chain. You have the code in the config.toml file.
 
-Some configuration :
+Some configuration to run:
 
     parity --config config.toml
-    curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node", "node"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8542        normalement vous avez l’adresse 0x005eb3d86d6c987860fbc95ab97da69ee6b6118e qui est renvoyée.
-    curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["user1", "user1"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8542       normalement vous avez l’adresse 0x00d695cd9b0ff4edc8ce55b493aec495b597e235 qui est renvoyée.
+    
+    # In the other terminal
+    curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node", "node"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8542
+    
+    # The address return is 0x005eb3d86d6c987860fbc95ab97da69ee6b6118e if you put exactly the same line
+
+    curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["user1", "user1"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8542 
+    
+    # The address return is 0x00d695cd9b0ff4edc8ce55b493aec495b597e235 if you put exactly the same line
 
 
 
