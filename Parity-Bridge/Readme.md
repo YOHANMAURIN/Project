@@ -189,11 +189,9 @@ Some configuration to run:
     
     # In the other terminal
     curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node", "node"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8542
-    
     # The address return is 0x005eb3d86d6c987860fbc95ab97da69ee6b6118e if you put exactly the same line
 
-    curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["user1", "user1"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8542 
-    
+    curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["user1", "user1"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8542   
     # The address return is 0x00d695cd9b0ff4edc8ce55b493aec495b597e235 if you put exactly the same line
 
 
