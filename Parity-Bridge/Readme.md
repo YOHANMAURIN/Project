@@ -129,6 +129,32 @@ You can connect this node to the user in the same way as we did above.
 
 ## Setup Parity-Bridge
 
+#### Install solc :
+
+    npm install -g solc
+    
+If it doesn't work :
+
+    npm install -g solc –save
+
+If it doesn't work again run :
+ 
+    sudo add-apt-repository ppa:ethereum/ethereum
+    sudo apt-get update
+    sudo apt-get install solc
+
+
+#### Clone Parity-Bridge
+
+    git clone https://github.com/paritytech/parity-bridge.git  #The version 2.0 of parity doesn't work, git clone my repositories who are the first version of parity-bridge 
+    cd parity-bridge
+    cargo build -p parity-bridge --release
+
+Put parity-bridge/target/release in your PATH
+Faire vi .bashrc
+Normalement le doc bashrc c’est ouvert, rajouter à la fin du doc ‘PATH=$PATH:/parity-bridge/target/release’ puis faire echap pour quitter le doc
+Run (pour l’enregistrer): Source .bashrc
+Dans le répertoire "parity-bridge/deploy", run : cargo build -p parity-bridge-deploy --release
 
 
 
