@@ -190,7 +190,7 @@ There are two possibilities :
 
     parity --config config.toml
     
-    # In the other terminal
+    # In the other shell
     curl --data '{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node", "node"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8542
     # The address return is 0x005eb3d86d6c987860fbc95ab97da69ee6b6118e if you put exactly the same line
 
@@ -242,6 +242,31 @@ In [foreign.contract] put the path of the bin.
 In [authorities] put the address of the authority of the sidechain PoA
 
 You have an exemple in the file METTRE LE FILE ICI !!!!
+
+In a new shell, go in the repository parity-bridge. Run :
+
+    env RUST_LOG=info parity-bridge-deploy --config bridge_config.toml --database db.toml  #permit to deploy the bridge
+    
+You will probably have "sending HomeBridge contract deployment transaction and waiting for 0 confirmations .. "
+
+You need to do a transaction on your home part. Run (in a new shell) :
+
+    curl --data '{"jsonrpc":"2.0","method":"personal_sendTransaction","params":[{"from":"0x00d695cd9b0ff4edc8ce55b493aec495b597e235","to":"0x005eb3d86d6c987860fbc95ab97da69ee6b6118e","value":"0xde0b6b3a7640000"}, "user"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8542
+
+If you have the same problem with the foreign part. You need again to do a transaction. Run : 
+
+    curl --data '{"jsonrpc":"2.0","method":"personal_sendTransaction","params":[{"from":"0x004ec07d2329997267Ec62b4166639513386F32E","to":"0x00bd138abd70e2f00903268f3db08f2d25677c9e","value":"0xde0b6b3a7640000"}, "user"],"id":0}' -H "Content-Type: application/json" -X POST localhost:8540
+
+As a reminder, the address 0x004 .. is that of the user of the sidechain PoA, the address 0x00b is the authority of the node0. (see beginning of the tutorial)
+
+Run parity-bridge (in the folder parity-bridge) :
+
+    env RUST_LOG=info parity-bridge --config bridge_config.toml --database db.toml 
+    
+Normally your bridge is deployed ! 
+
+
+
 
 
 
