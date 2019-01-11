@@ -241,6 +241,7 @@ In [foreign.contract] put the path of the bin.
 
 In [authorities] put the address of the authority of the sidechain PoA
 
+You have an exemple in the file METTRE LE FILE ICI !!!!
 
 
 
