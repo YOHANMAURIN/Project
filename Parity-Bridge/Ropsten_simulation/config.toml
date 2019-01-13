@@ -1,0 +1,37 @@
+[parity]
+chain = "./spec.json"
+base_path = "/tmp/parity-dev"
+
+[ipc]
+disable = false
+path = "$HOME/urp/node.ipc"
+apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "parity_accounts", "traces", "rpc", "shh", "shh_pubsub"]
+
+[rpc]
+port = 8542
+interface = "local"
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+cors = ["all"]
+hosts = ["all"]
+
+[ui]
+port = 8182
+
+[websockets]
+origins = ["all"]
+port = 8452
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+
+[account]
+unlock = [
+  "0x005eb3d86d6c987860fbc95ab97da69ee6b6118e",
+]
+password = ["node1.pwds"]
+
+[mining]
+engine_signer = "0x005eb3d86d6c987860fbc95ab97da69ee6b6118e"
+author = "0x005eb3d86d6c987860fbc95ab97da69ee6b6118e"
+#reseal_on_txs = "none"
+reseal_min_period = 0
+min_gas_price = 0
+
