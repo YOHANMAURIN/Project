@@ -8,6 +8,8 @@ In the file demo-spec-initial.json you have the first configuration of the file 
 
 #### Creation of 3 accounts: 2 authorities accounts and a user account
 
+You need to put the code in the file node0_initial.toml in the file node0.toml. Same for node1.
+
 Run node0:
 
     parity --config node0.toml
@@ -39,8 +41,7 @@ You need to __add the validor in the blockchain setup__. It's the final configur
 
 To run a node as an authority, we must allow it to sign transaction. For that, you have the file node.pwds. Each line contains a password that we used when authoring authority accounts.
 
-Add the authority account in each node :
-You have the new config in the file node0.toml and the file node1.toml. Copy paste the files in the files node0 and node1.
+Add the authority account in each node : You have the new config in the file node0.toml and the file node1.toml. 
 
 Run again the node:
 
