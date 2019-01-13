@@ -1,8 +1,10 @@
-# Proof of Authority
-
-## Blockchain Setup
+# Generate a blockchain in proof of authority with the Aura Consensus
 
 The file demo-spec.json is to setup the config of the chain with a PoA (Aura). The file node0.toml and node1.toml is to setup the nodes.
+
+#### Blockchain Setup
+
+In the file demo-spec-initial.json you have the first configuration of the file demo-spec.json . You need to use this first configuration to run the nodes.
 
 #### Creation of 3 accounts: 2 authorities accounts and a user account
 
@@ -31,14 +33,14 @@ The address return is 0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2 if you put exac
 
 Recap : The node0 has the authority account : 0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e and the user account 0x004ec07d2329997267Ec62b4166639513386F32E. The node1 has the authority account: 0x00Aa39d30F0D20FF03a22cCfc30B7EfbFca597C2.
 
-You need to __add the validor in the blockchain setup__. The name of the new file is demo-spec-new.json. Copy-Past this file in demo-spec.json .
+You need to __add the validor in the blockchain setup__. It's the final configuration. You can find this configuration in the file demo-spec.json. 
 
 #### Execute the authority node :
 
 To run a node as an authority, we must allow it to sign transaction. For that, you have the file node.pwds. Each line contains a password that we used when authoring authority accounts.
 
 Add the authority account in each node :
-You have the new config in the file node0new.toml and the file node1new.toml. Copy paste the files in the files node0 and node1.
+You have the new config in the file node0.toml and the file node1.toml. Copy paste the files in the files node0 and node1.
 
 Run again the node:
 
