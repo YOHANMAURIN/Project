@@ -1,0 +1,66 @@
+../contracts/bridge.sol:49:9: Warning: Use of the "var" keyword is deprecated.
+        var hash = MessageSigning.hashMessage(message);
+        ^------^
+../contracts/bridge.sol:50:9: Warning: Use of the "var" keyword is deprecated.
+        var encountered_addresses = new address[](allowed_signers.length);
+        ^-----------------------^
+../contracts/bridge.sol:53:13: Warning: Use of the "var" keyword is deprecated.
+            var recovered_address = ecrecover(hash, vs[i], rs[i], ss[i]);
+            ^-------------------^
+../contracts/bridge.sol:233:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function HomeBridge(
+    ^ (Relevant source part starts here and spans across multiple lines).
+../contracts/bridge.sol:434:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function ForeignBridge(
+    ^ (Relevant source part starts here and spans across multiple lines).
+../contracts/bridge.sol:460:9: Warning: Use of the "var" keyword is deprecated.
+        var hash = keccak256(recipient, value, transactionHash);
+        ^------^
+../contracts/bridge.sol:523:9: Warning: Use of the "var" keyword is deprecated.
+        var hash = keccak256(message);
+        ^------^
+../contracts/bridge.sol:105:16: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        return keccak256(prefix, Helpers.uintToString(message.length), message);
+               ^--------------------------------------------------------------^
+../contracts/bridge.sol:255:53: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        require(maxTotalHomeContractBalance == 0 || this.balance <= maxTotalHomeContractBalance);
+                                                    ^----------^
+../contracts/bridge.sol:256:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Deposit(msg.sender, msg.value);
+        ^----------------------------^
+../contracts/bridge.sol:308:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Withdraw(recipient, valueRemainingAfterSubtractingCost, hash);
+        ^-----------------------------------------------------------^
+../contracts/bridge.sol:350:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, recipient, tokens);
+        ^-------------------------------------^
+../contracts/bridge.sol:366:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Approval(msg.sender, spender, tokens);
+        ^-----------------------------------^
+../contracts/bridge.sol:387:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(from, to, tokens);
+        ^------------------------^
+../contracts/bridge.sol:460:20: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        var hash = keccak256(recipient, value, transactionHash);
+                   ^------------------------------------------^
+../contracts/bridge.sol:469:13: Warning: Invoking events without "emit" prefix is deprecated.
+            DepositConfirmation(recipient, value, transactionHash);
+            ^----------------------------------------------------^
+../contracts/bridge.sol:479:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(0x0, recipient, value);
+        ^-----------------------------^
+../contracts/bridge.sol:480:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Deposit(recipient, value, transactionHash);
+        ^----------------------------------------^
+../contracts/bridge.sol:506:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, 0x0, value);
+        ^------------------------------^
+../contracts/bridge.sol:507:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Withdraw(recipient, value, homeGasPrice);
+        ^--------------------------------------^
+../contracts/bridge.sol:533:13: Warning: Invoking events without "emit" prefix is deprecated.
+            CollectedSignatures(msg.sender, hash);
+            ^-----------------------------------^
+../contracts/bridge.sol:535:13: Warning: Invoking events without "emit" prefix is deprecated.
+            WithdrawSignatureSubmitted(hash);
+            ^------------------------------^

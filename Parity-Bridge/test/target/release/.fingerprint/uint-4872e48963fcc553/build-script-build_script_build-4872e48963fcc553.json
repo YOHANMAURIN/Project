@@ -1,0 +1,1 @@
+{"rustc":17859320367814235581,"features":"[\"heapsize\", \"heapsizeof\", \"rustc-hex\", \"std\"]","target":13123923088509177768,"profile":3515853926593532548,"path":5894065414700521426,"deps":[["rustc_version v0.2.2","rustc_version",6874602313601287426]],"local":[{"Precalculated":"0.1.2"}],"rustflags":[],"edition":"Edition2015"}

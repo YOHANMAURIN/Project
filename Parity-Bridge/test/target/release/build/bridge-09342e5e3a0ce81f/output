@@ -1,0 +1,4 @@
+cargo:rerun-if-changed=../contracts/bridge.sol
+cargo:rustc-env=GIT_HASH=53c56a2440493323ea2a5ad122036e226d7aa610
+
+cargo:rustc-env=SOLC_VERSION=Version: 0.4.24+commit.e67f0147.Linux.g++

@@ -1,0 +1,2 @@
+[workspace]
+members = ["tests", "cli", "bridge", "integration-tests", "deploy"]
