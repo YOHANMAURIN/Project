@@ -1,4 +1,4 @@
-# Generate a blockchain in proof of authority with the Aura Consensus
+# Generate a blockchain in proof of authority with the Aura consensus
 
 The file demo-spec.json is to setup the config of the chain with a PoA (Aura). The file node0.toml and node1.toml is to setup the nodes.
 
