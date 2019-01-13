@@ -2,8 +2,7 @@
 
 ## Blockchain Setup
 
-The file demo-spec.json is to setup the config of the chain with a PoA (Aura)
-The file node0.toml and node1.toml is to setup the nodes
+The file demo-spec.json is to setup the config of the chain with a PoA (Aura). The file node0.toml and node1.toml is to setup the nodes.
 
 #### Creation of 3 accounts: 2 authorities accounts and a user account
 
