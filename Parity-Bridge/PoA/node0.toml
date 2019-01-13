@@ -1,0 +1,33 @@
+[parity]
+chain = "demo-spec.json"
+base_path = "/tmp/parity0"
+[network]
+port = 30300
+
+[rpc]
+port = 8540
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+hosts=["all"]
+cors= ["all"]
+
+
+[websockets]
+port = 8450
+
+[ipc]
+disable = false
+path = "$HOME/occi/node.ipc"
+apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "parity_accounts", "traces", "rpc", "shh", "shh_pubsub"]
+
+[account]
+unlock = [
+  "0x00bd138abd70e2f00903268f3db08f2d25677c9e",
+]
+password = ["node.pwds"]
+[mining]
+engine_signer = "0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e"
+reseal_on_txs = "none"
+
+
+
+
