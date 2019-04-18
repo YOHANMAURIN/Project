@@ -1,0 +1,54 @@
+body {
+    background-color:#F0F0F0;
+    padding: 2em;
+    font-family: 'Raleway','Source Sans Pro', 'Arial';
+}
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+label {
+    display:block;
+    margin-bottom:10px;
+}
+input {
+    padding:10px;
+    width: 50%;
+    margin-bottom: 1em;
+}
+button {
+    padding: 1em 4em;
+    display:inline-block;
+}
+
+#vote {
+    padding:1em;
+    background-color:#fff;
+    margin: 1em 0;
+}
+
+#information {
+    padding:1em;
+    background-color:#fff;
+    margin: 1em 0;
+}
+
+#open_date {
+    display: inline-block;
+    width: 23%;
+}
+
+#open_time {
+    display: inline-block;
+    width: 22.5%;
+}
+
+#close_date {
+    display: inline-block;
+    width: 23%;
+}
+    
+#close_time {
+    display: inline-block;
+    width: 22.5%;
+}
