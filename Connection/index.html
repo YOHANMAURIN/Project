@@ -14,7 +14,7 @@
 <body>
     <div class="container">
 
-        <h1>Test Page </h1>
+        <h1>Creation Page </h1>
         <h2 id="validQuestion"></h2>
 
         <label for="name" class="col-lg-2 control-label">Put a number : </label>
@@ -85,8 +85,16 @@
             }
         ]); //mettre ABI entre les parenthèses avec les crochés
         web3.eth.accounts.forEach (account => {
-            balance = web3.eth.getBalance (account);
-            console.log (balance);
+            //balance = web3.eth.getBalance (account);
+        web3.eth.getBalance(address, function (error, result) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log(result);
+            }
+        })
+        console.log (balance);
+
         })
         var PwC = PwCContract.at('0x0b12e59abac52245ccfebbc11e14f86e4fa4f497'); //contract address that we want to interact
         console.log(PwC);
