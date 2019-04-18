@@ -101,7 +101,7 @@
 
       $("#button").click(function() {
           console.log(typeof($("#question").val()));
-            PwC.result($("#question").val(),function(error, result){ //voir s'il y a besoin de mettre un $ devant idVote
+            PwC.result($("#question").val(),function(error, result){ 
                 if(!error)
                 {
                     console.log(result);
@@ -110,7 +110,7 @@
                     console.error(error);
                 });
 
-            PwC.show(function(error, result){ //voir s'il y a besoin de mettre un $ devant idVote
+            PwC.show(function(error, result){ 
                 if(!error)
                 {
                     $("#validQuestion").html('votre numéro est : ' + result);
