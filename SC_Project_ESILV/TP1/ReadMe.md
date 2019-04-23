@@ -1,7 +1,7 @@
 Werewolf Game - Project directed by Maurin Yohan
 
 - Is there a designated organizer?
-<br> The leader of the game </ br>
+<br> The leader of the game 
 
 - Who will be the voters?
 <br> Voters for the night smart contract are the werewolves
