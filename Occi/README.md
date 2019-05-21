@@ -14,7 +14,7 @@ Moreover, to be in adequacy with Solidity which does not take a decimal point an
 
 -We then match the two databases in one, which allows us to have a DB with your ethereum address and your geolocation coordinates.
 
--We have an API coded in .... Which takes the inputs in the previous DB and checks if the geolocation coordinates correspond to an ethereum address, fulfil the requirements of the retailer campaign. If this is the case, this information is pushed on a web page that corresponds to the web page of the retailer's campaign (which has already been pre-filled by the retailer). Here is an example https://yohanmaurin.github.io/Occi/index. This web page communicates directly (thanks to web3.js) with the SC of the campaign. It allows you the transition between the Campaign Condition Verification API and the Campaign SC.
+-We have an API coded in .... Which takes the inputs in the previous DB and checks if the geolocation coordinates correspond to an ethereum address, fulfil the requirements of the retailer campaign. If this is the case, this information is pushed on a web page that corresponds to the web page of the retailer's campaign (which has already been pre-filled by the retailer). Here is an example https://yohanmaurin.github.io/Project/Occi/index. This web page communicates directly (thanks to web3.js) with the SC of the campaign. It allows you the transition between the Campaign Condition Verification API and the Campaign SC.
 
 -In the SC there is a new check, below you will find the check as part of a campaign that rewards people in the store.
 ```

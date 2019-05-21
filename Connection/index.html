@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creation</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>Test Page </h1>
+        <h2 id="validQuestion"></h2>
+
+        <label for="name" class="col-lg-2 control-label">Put a number : </label>
+            <input id="question" type="text">
+        <input id="button" type="button" value="Request" >
+
+        
+        <h2 id="showQuestion"></h2>
+        
+        
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <script>
+
+        //function getQuestion(){
+        //    var test = document.getElementById("question").value;
+        //    $("#showQuestion").html(test);
+        //}
+
+        if (typeof web3 !== 'undefined') { //mettre metamask ou Mist à la place de undefined pour le tesnet ou le mainnet
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+            //web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545")); //Ganache address
+        }
+        //web3.eth.personal.unlockAccount('0x0FEDcb662B0229f4e3521026Fd4455Ba93f77fe4', 'enter liberty sword little mosquito metal warm merit peanut bacon sniff dose', 1000);
+        
+        web3.eth.defaultAccount = web3.eth.accounts['0xDd4d45C6CAbB1A2527302dEE0239cf73Ff0129d4']; //compte qui va etre débité
+        //web3.eth.defaultAccount = web3.eth.accounts[0];
+        var PwCContract = web3.eth.contract([
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "jack",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "result",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "show",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ]); //mettre ABI entre les parenthèses avec les crochés
+        web3.eth.accounts.forEach (account => {
+            //balance = web3.eth.getBalance (account);
+        web3.eth.getBalance(account, function (error, result) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log(result);
+            }
+        })
+        //console.log (balance);
+
+        })
+        var PwC = PwCContract.at('0x0b12e59ABAC52245Ccfebbc11E14f86E4fa4f497'); //contract address that we want to interact, With Upper and Lower case
+        console.log(PwC);
+
+      $("#button").click(function() {
+          console.log(typeof($("#question").val()));
+            PwC.result($("#question").val(),function(error, result){ 
+                if(!error)
+                {
+                    console.log(result);
+                }
+                else
+                    console.error(error);
+                });
+
+            PwC.show(function(error, result){ 
+                if(!error)
+                {
+                    $("#validQuestion").html('votre numéro est : ' + result);
+                    console.log(result);
+                }
+                else
+                    console.error(error);
+                });
+            }); 
+            
+
+
+    </script>
+
+</body>
+</html>
