@@ -312,7 +312,7 @@ contract Pausable is Ownable {
 contract PausableToken is StandardToken, Pausable {
 
   function transfer(address _to, uint256 _value) public whenNotPaused returns (bool) {
-    return super.transfer(_to, _value);
+    return super.transfer(_to, _value); //super keywords in Solidity gives access to the immediate parent contract from which the current contract is derived.
   }
 
   function transferFrom(address _from, address _to, uint256 _value) public whenNotPaused returns (bool) {
